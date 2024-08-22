@@ -1,4 +1,4 @@
-package will;
+package com.willcb.projects.texteditor;
 
 import static org.junit.jupiter.api.Assertions.*;
 

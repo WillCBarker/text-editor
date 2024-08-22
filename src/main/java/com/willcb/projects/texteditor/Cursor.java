@@ -1,4 +1,4 @@
-package will;
+package com.willcb.projects.texteditor;
 
 public class Cursor {
     private int row;

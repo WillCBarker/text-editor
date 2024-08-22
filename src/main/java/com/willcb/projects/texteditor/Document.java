@@ -1,4 +1,4 @@
-package will;
+package com.willcb.projects.texteditor;
 
 import java.util.ArrayList;
 import java.util.List;
