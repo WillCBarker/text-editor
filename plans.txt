@@ -1,2 +1,2 @@
-- Figure out how to set up UI.
+- Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
 - Research optimizing for common text editor operations via implementation of gap buffer.
