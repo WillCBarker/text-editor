@@ -2,26 +2,66 @@ package will;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.junit.jupiter.api.*;
 
-public class DocumentTest 
-{
+public class DocumentTest {
+    private Document document;
+    private List<List<Character>> expectedTextMatrix;
+
+    @BeforeEach
+    public void setup() {
+        document = new Document();
+        expectedTextMatrix = new ArrayList<>(); 
+        expectedTextMatrix.add(new ArrayList<>());
+    }
 
     @Test
-    public void testSetCursorPosition() {
-        Document document = new Document();
+    public void testAddCharacter() {
+        document.addCharacter('a');
+        document.addCharacter('b');
+        document.addCharacter('c');
+        expectedTextMatrix.get(0).add('a');
+        expectedTextMatrix.get(0).add('b');
+        expectedTextMatrix.get(0).add('c');
 
-        document.setCursorPosition(12, 5);
-        System.out.println("Step 1: " + document.getTextMatrix());
-        assertEquals(0, document.getCursorRow());
-        assertEquals(0, document.getCursorColumn());
-
-        document.setCursorPosition(12, 5);
-        System.out.println("Step 2: " + document.getTextMatrix());
-        assertEquals(1, document.getCursorRow());
-        assertEquals(0, document.getCursorColumn());
-
-
+        assertEquals(expectedTextMatrix, document.getTextMatrix());
     }
+
+    @Test
+    public void testDeleteCharacterEndOfString() {
+        document.addCharacter('a');
+        expectedTextMatrix.get(0).add('a');
+
+        expectedTextMatrix.get(0).remove(0);
+        document.deleteCharacter();
+
+        assertEquals(expectedTextMatrix, document.getTextMatrix());
+    }
+
+    @Test
+    public void testDeleteCharacterMiddleOfString() {
+        document.addCharacter('a');
+        document.addCharacter('b');
+        document.addCharacter('c');
+        expectedTextMatrix.get(0).add('a');
+        expectedTextMatrix.get(0).add('b');
+        expectedTextMatrix.get(0).add('c');
+
+        expectedTextMatrix.get(0).remove(1);
+        document.setCursorPosition(0, 2);
+        document.deleteCharacter();
+
+        assertEquals(expectedTextMatrix, document.getTextMatrix());
+    }
+
+    @Test
+    public void testDeleteCharacterFromEmptyString() {
+        document.deleteCharacter();
+
+        assertEquals(expectedTextMatrix, document.getTextMatrix());
+    }
+
 }

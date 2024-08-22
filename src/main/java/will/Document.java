@@ -1,62 +1,52 @@
 package will;
 
-import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Document {
-    private ArrayList<ArrayList<Character>> textMatrix;
-    private HashMap<String, Integer> cursorMap;
+    private List<List<Character>> textMatrix;
+    private Cursor cursor;
 
     public Document() {
         // Each index represents a line
+        // Each index within each line represents a character
         this.textMatrix = new ArrayList<>();
-        this.cursorMap = new HashMap<>();
-        this.cursorMap.put("row", 0);
-        this.cursorMap.put("column", 0);
+        textMatrix.add(new ArrayList<>());
+        this.cursor = new Cursor(0, 0);
     }
 
-    public ArrayList<ArrayList<Character>> getText() {
-        return textMatrix;
-    }
-
-    public void setCursorPosition(Integer rowValue, Integer columnValue) {
-        // If selected row is past the final row, set selected row to last used line + 1
-        if (rowValue > this.textMatrix.size() - 1) {
-            ArrayList<Character> newLine = new ArrayList<>();
-            rowValue = this.textMatrix.size();
-            this.textMatrix.add(newLine);
-        }
-
-        // If selected column hasn't been created, set selected column to end of current line + 1.
-        if (columnValue > this.textMatrix.get(rowValue).size() - 1) {
-            columnValue = this.textMatrix.get(rowValue).size();
-        }
-
-        this.cursorMap.put("row", rowValue);
-        this.cursorMap.put("column", columnValue);
-        System.out.println("Row: " + this.cursorMap.get("row") + " | " + "Col: " + this.cursorMap.get("column"));
-        // maybe return cursorMap?
-    }
-
-    public Integer getCursorRow() {
-        return this.cursorMap.get("row");
-    }
-
-    public Integer getCursorColumn() {
-        return this.cursorMap.get("column");
-    }
-
-    public ArrayList<ArrayList<Character>> getTextMatrix() {
+    public List<List<Character>> getTextMatrix() {
         return this.textMatrix;
     }
 
-    public void addText(Character character) {
-        Integer row = this.cursorMap.get("row");
-        Integer column = this.cursorMap.get("column");
-
-        // TBD
-        this.textMatrix.get(row).set(column, character);
+    public void setCursorPosition(int row, int column) {
+        this.cursor.setRow(row, this.textMatrix.size() - 1);
+        int currentRow = this.cursor.getRow();
+        this.cursor.setColumn(column, this.textMatrix.get(currentRow).size());
     }
 
+    public void addCharacter(Character character) {
+        Integer currentRow = cursor.getRow();
+        Integer currentColumn = cursor.getColumn();
+        if (currentRow >= 0 && currentRow < this.textMatrix.size()) {
+            this.textMatrix.get(currentRow).add(currentColumn, character);
+        } 
+        else if (currentRow >= 0) {
+            this.textMatrix.get(currentRow).set(currentColumn, character);
+        }
+
+        // Ensure to account for end of line causing row increment later on
+        this.cursor.setColumn(currentColumn + 1, this.textMatrix.get(currentRow).size());
+    }
+
+    public void deleteCharacter() {
+        Integer currentRow = cursor.getRow();
+        Integer currentColumn = cursor.getColumn();
+
+        if (currentColumn > 0) {
+            this.textMatrix.get(currentRow).remove(currentColumn - 1);
+            this.cursor.setColumn(currentColumn - 1, this.textMatrix.get(currentRow).size());
+        }
+    }
 }
