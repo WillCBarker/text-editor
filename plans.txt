@@ -1,1 +1,2 @@
-- Research implementation of gap buffer
+- Figure out how to set up UI
+- Research optimizing for common text editor operations via implementation of gap buffer
