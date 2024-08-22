@@ -19,13 +19,29 @@ public class DocumentTest {
     }
 
     @Test
-    public void testAddCharacter() {
+    public void testAddCharacterInOrder() {
         document.addCharacter('a');
         document.addCharacter('b');
         document.addCharacter('c');
         expectedTextMatrix.get(0).add('a');
         expectedTextMatrix.get(0).add('b');
         expectedTextMatrix.get(0).add('c');
+
+        assertEquals(expectedTextMatrix, document.getTextMatrix());
+    }
+
+    @Test
+    public void testAddCharacterInBetweenCharacters() {
+        document.addCharacter('a');
+        document.addCharacter('c');
+        document.addCharacter('d');
+        expectedTextMatrix.get(0).add('a');
+        expectedTextMatrix.get(0).add('b');
+        expectedTextMatrix.get(0).add('c');
+        expectedTextMatrix.get(0).add('d');
+
+        document.setCursorPosition(0, 1);
+        document.addCharacter('b');
 
         assertEquals(expectedTextMatrix, document.getTextMatrix());
     }
