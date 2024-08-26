@@ -17,10 +17,11 @@ public class GapBuffer {
         }
     }
 
-    public void insert(char c) {
+    public void insert(char c, int cursorPosition) {
         if (this.gapStart == this.gapEnd) {
             resizeBuffer();
         }
+        shiftGapToCursor(cursorPosition);
         this.buffer[this.gapStart++] = c;
     }
 
