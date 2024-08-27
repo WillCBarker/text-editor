@@ -1,14 +1,18 @@
 package com.willcb.projects.texteditor;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class GapBuffer {
     private char []buffer;
     private int gapStart; 
     private int gapEnd;
 
     public GapBuffer() {
-        this.buffer = new char[200];
+        this.buffer = new char[50];
         this.gapStart = 0;
-        this.gapEnd = 50;
+        this.gapEnd = 10;
     }
 
     public void delete() {
@@ -41,16 +45,45 @@ public class GapBuffer {
         }
         if (cursorPosition > this.gapStart) {
             // Shift gap to the right
+
             int shiftDistance = cursorPosition - this.gapStart;
-            System.arraycopy(this.buffer, this.gapStart, this.buffer, this.gapEnd, shiftDistance);
+            System.arraycopy(this.buffer, this.gapEnd, this.buffer, this.gapStart, shiftDistance);
             this.gapStart += shiftDistance;
             this.gapEnd += shiftDistance;
         } else if (cursorPosition < this.gapStart) {
             // Shift gap to the left
+                    
             int shiftDistance = this.gapStart - cursorPosition;
-            System.arraycopy(this.buffer, this.gapEnd - shiftDistance, this.buffer, this.gapStart - shiftDistance, shiftDistance);
+            System.arraycopy(this.buffer, cursorPosition, this.buffer, this.gapEnd - shiftDistance, shiftDistance);
             this.gapStart -= shiftDistance;
             this.gapEnd -= shiftDistance;
         } 
+    }
+
+    public void printNonGapText() {
+        List<Character> myList = new ArrayList<>();
+        for (int i = 0; i < this.buffer.length; i++) {
+            if (i < this.gapStart || i > this.gapEnd) {
+                myList.add(this.buffer[i]);
+            }
+        }
+        System.out.println(myList);
+    }
+
+    @Override
+    public String toString() {
+        return Arrays.toString(this.buffer);
+    }
+
+    public char[] getBuffer() {
+        return this.buffer;
+    }
+
+    public int getGapStart() {
+        return this.gapStart;
+    }
+
+    public int getGapEnd() {
+        return this.gapEnd;
     }
 }
