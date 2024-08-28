@@ -1,2 +1,9 @@
+- Have main loop accepting inputs, print out gap buffer after every input.
+    1. Detect keystrokes
+    2. interact with gap buffer via keystrokes
+        - backspace removes char before cursorPosition
+        - delete removes char after cursorPosition
+    
+    FIGURE OUT: JNA library for interacting with terminal and reading input
+    
 - Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
-- Research optimizing for common text editor operations via implementation of gap buffer.
