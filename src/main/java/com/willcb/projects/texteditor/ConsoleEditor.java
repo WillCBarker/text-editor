@@ -29,7 +29,7 @@ public class ConsoleEditor {
                     System.out.println("Enter");
                 } else if (keyChar == '\b') {
                     if (gapBuffer.getGapStart() > 0) {
-                        gapBuffer.delete(cursor.getPosition());
+                        gapBuffer.delete();
                         cursor.setPosition(--cursorPosition);
                     }
                 } else {
