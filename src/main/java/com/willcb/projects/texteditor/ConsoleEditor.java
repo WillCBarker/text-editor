@@ -1,5 +1,7 @@
 package com.willcb.projects.texteditor;
 
+import java.util.Arrays;
+
 import com.sun.jna.platform.win32.Kernel32;
 import com.sun.jna.platform.win32.Wincon;
 import com.sun.jna.platform.win32.WinNT.HANDLE;
@@ -22,24 +24,38 @@ public class ConsoleEditor {
             Kernel32.INSTANCE.ReadConsoleInput(hConsoleInput, record, 1, eventsRead);
             System.out.println(record[0].Event.KeyEvent);
             KEY_EVENT_RECORD keyEvent = record[0].Event.KeyEvent;
+
             if (keyEvent.bKeyDown) {
                 char keyChar = keyEvent.uChar;
                 int cursorPosition = cursor.getPosition();
-                if (keyChar == '\r') {
-                    System.out.println("Enter");
-                } else if (keyChar == '\b') {
-                    if (gapBuffer.getGapStart() > 0) {
-                        gapBuffer.delete();
-                        cursor.setPosition(--cursorPosition);
-                    }
-                } else {
-                    System.out.println("Key: " + keyChar);
-                    gapBuffer.insert(keyChar, cursorPosition);
-                    cursor.setPosition(++cursorPosition);
+
+                switch (keyEvent.wVirtualKeyCode) {
+                    case 0x0D: // Enter key (VK_RETURN)
+                        System.out.println("Enter");
+                        break;
+                    case 0x08: // Backspace Key (VK_BACK)
+                        if (gapBuffer.getGapStart() > 0) {
+                            gapBuffer.delete();
+                            cursor.setPosition(--cursorPosition);
+                        }
+                        break;
+                    case 0x25: // Left Arrow key (VK_LEFT)
+                        if (cursorPosition > 0) {
+                            cursor.setPosition(--cursorPosition);
+                        }
+                        break;
+                    case 0x27: // Right Arrow key (VK_RIGHT)
+                        if (cursorPosition < gapBuffer.getBufferSize()) {
+                            cursor.setPosition(++cursorPosition);
+                        }
+                        break;
+                    default: 
+                        System.out.println("Key: " + keyChar);
+                        gapBuffer.insert(keyChar, cursorPosition);
+                        cursor.setPosition(++cursorPosition);
+                        break;
                 }
-                System.out.println(gapBuffer);
                 gapBuffer.printNonGapText();
-                System.out.println(cursor.getPosition());
             }
         }
     }
