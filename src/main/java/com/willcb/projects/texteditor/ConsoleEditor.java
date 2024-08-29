@@ -60,6 +60,3 @@ public class ConsoleEditor {
         }
     }
 }
-
-
-//  misses second to last letter

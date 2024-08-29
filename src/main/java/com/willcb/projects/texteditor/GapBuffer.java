@@ -86,4 +86,8 @@ public class GapBuffer {
     public int getGapEnd() {
         return this.gapEnd;
     }
+
+    public int getBufferSize(){
+        return this.buffer.length;
+    }
 }
