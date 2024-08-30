@@ -8,8 +8,7 @@ import com.sun.jna.ptr.IntByReference;
 
 public class ConsoleEditor {
     public static void main(String[] args) {
-        GapBuffer gapBuffer = new GapBuffer();
-        Cursor cursor = new Cursor(0);
+        Document document = new Document();
 
         HANDLE hConsoleInput = Kernel32.INSTANCE.GetStdHandle(Wincon.STD_INPUT_HANDLE);
         // Use hConsole to read input and write output
@@ -24,36 +23,25 @@ public class ConsoleEditor {
 
             if (keyEvent.bKeyDown) {
                 char keyChar = keyEvent.uChar;
-                int cursorPosition = cursor.getPosition();
 
                 switch (keyEvent.wVirtualKeyCode) {
                     case 0x0D: // Enter key (VK_RETURN)
                         System.out.println("Enter");
                         break;
                     case 0x08: // Backspace Key (VK_BACK)
-                        if (cursorPosition >= 0) {
-                            cursor.setPosition(Math.max(cursorPosition-1, 0));
-                            gapBuffer.delete(cursorPosition);
-                        }
+                        document.deleteCharacter();
                         break;
                     case 0x25: // Left Arrow key (VK_LEFT)
-                        if (cursorPosition > 0) {
-                            cursor.setPosition(--cursorPosition);
-                        }
+                        document.arrowKeyHandler("left");
                         break;
                     case 0x27: // Right Arrow key (VK_RIGHT)
-                        if (cursorPosition < gapBuffer.getBufferSize()) {
-                            cursor.setPosition(++cursorPosition);
-                        }
+                        document.arrowKeyHandler("right");
                         break;
                     default: 
-                        System.out.println("Key: " + keyChar);
-                        gapBuffer.insert(keyChar, cursorPosition);
-                        cursor.setPosition(++cursorPosition);
+                        document.addCharacter(keyChar);
                         break;
                 }
-                System.out.println("GS: " + gapBuffer.getGapStart() + " GE: " + gapBuffer.getGapEnd() + " Cursor: " + cursor.getPosition());
-                gapBuffer.printNonGapText();
+                document.showText();
             }
         }
     }

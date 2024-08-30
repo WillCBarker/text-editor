@@ -1,86 +1,59 @@
 package com.willcb.projects.texteditor;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class Document {
-    private List<List<Character>> textMatrix;
     private Cursor cursor;
+    private GapBuffer gapBuffer;
 
     public Document() {
-        // Each index represents a line
-        // Each index within each line represents a character
-        this.textMatrix = new ArrayList<>();
-        addLine();
-        this.cursor = new Cursor(0, 0);
+        this.gapBuffer = new GapBuffer();
+        this.cursor = new Cursor(0);
     }
 
-    /**
-     * Sets the position of the cursor within the document.
-     * Adjusts the row and column to valid positions within the text matrix.
-     *
-     * @param row    The desired row to set the cursor to. 
-     *               If the value is out of bounds, it is adjusted to the nearest valid value.
-     * @param column The desired column to set the cursor to. 
-     *               If the value is out of bounds, it is adjusted to the nearest valid value within the row.
-     */
-    public void setCursorPosition(int row, int column) {
-        this.cursor.setRow(row, this.textMatrix.size() - 1);
-        int currentRow = this.cursor.getRow();
-        this.cursor.setColumn(column, this.textMatrix.get(currentRow).size());
+    public void arrowKeyHandler(String action) {
+        int cursorPosition = cursor.getPosition();
+        switch (action) {
+            case "left":
+                System.out.println("LEFT" + (cursorPosition - 1));
+                if (cursorPosition > 0) {
+                    cursor.setPosition(cursorPosition - 1);
+                }
+                break;
+            case "right":
+                System.out.println("RIGHT" + (cursorPosition + 1));
+
+                if (cursorPosition < gapBuffer.getBufferSize()) {
+                    cursor.setPosition(cursorPosition + 1);
+                }
+                break;
+        }
     }
 
     /**
      * Adds a character at the current cursor position within the document.
-     * If the cursor is at a valid position within a row, the character is inserted at that position.
-     * If the cursor is positioned at the end of a row, the character is appended.
+     * If the cursor is at a valid position, the character is inserted at that position.
      * After insertion, the cursor moves to the next column.
      *
      * @param character The character to be added to the document.
      */
     public void addCharacter(Character character) {
-        int currentRow = cursor.getRow();
-        int currentColumn = cursor.getColumn();
-        if (currentRow >= 0 && currentRow < this.textMatrix.size()) {
-            this.textMatrix.get(currentRow).add(currentColumn, character);
-        } 
-        else if (currentRow >= 0) {
-            this.textMatrix.get(currentRow).set(currentColumn, character);
-        }
+        int cursorPosition = cursor.getPosition();
 
-        // Ensure to account for end of line causing row increment later on
-        this.cursor.setColumn(currentColumn + 1, this.textMatrix.get(currentRow).size());
+        System.out.println("Key: " + character);
+        this.gapBuffer.insert(character, cursorPosition);
+        cursor.setPosition(++cursorPosition);
     }
 
-    /**
-     * Deletes the character at the position immediately before the current cursor position.
-     * If the cursor is at the beginning of a row, no character is deleted.
-     * After deletion, the cursor moves to the previous column.
-     */
     public void deleteCharacter() {
-        int currentRow = cursor.getRow();
-        int currentColumn = cursor.getColumn();
+        int cursorPosition = cursor.getPosition();
 
-        if (currentColumn > 0) {
-            this.textMatrix.get(currentRow).remove(currentColumn - 1);
-            this.cursor.setColumn(currentColumn - 1, this.textMatrix.get(currentRow).size());
+        if (cursorPosition >= 0) {
+            cursor.setPosition(Math.max(cursorPosition-1, 0));
+            gapBuffer.delete(cursorPosition);
         }
     }
 
-    /*
-     * Appends an ArrayList to the textMatrix.
-     */
-    public void addLine() {
-        this.textMatrix.add(new ArrayList<>());
-    }
-
-    /**
-     * Retrieves the current state of the text matrix.
-     *
-     * @return A list of lists where each inner list represents a line of characters in the document.
-     */
-    public List<List<Character>> getTextMatrix() {
-        return this.textMatrix;
+    public void showText() {
+        System.out.println("Cursor: " + this.cursor.getPosition());
+        this.gapBuffer.printNonGapText();
     }
 }
