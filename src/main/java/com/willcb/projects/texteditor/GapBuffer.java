@@ -15,7 +15,8 @@ public class GapBuffer {
         this.gapEnd = 10;
     }
 
-    public void delete() {
+    public void delete(int cursorPosition) {
+        shiftGapToCursor(cursorPosition);
         if (this.gapStart > 0) {
             this.gapStart--;
         }
@@ -47,14 +48,14 @@ public class GapBuffer {
             // Shift gap to the right
 
             int shiftDistance = cursorPosition - this.gapStart;
-            System.arraycopy(this.buffer, this.gapEnd, this.buffer, this.gapStart, shiftDistance);
+            System.arraycopy(this.buffer, this.gapEnd + 1, this.buffer, this.gapStart, shiftDistance);
             this.gapStart += shiftDistance;
             this.gapEnd += shiftDistance;
         } else if (cursorPosition < this.gapStart) {
             // Shift gap to the left
                     
             int shiftDistance = this.gapStart - cursorPosition;
-            System.arraycopy(this.buffer, cursorPosition, this.buffer, this.gapEnd - shiftDistance, shiftDistance);
+            System.arraycopy(this.buffer, cursorPosition, this.buffer, this.gapEnd - shiftDistance + 1, shiftDistance);
             this.gapStart -= shiftDistance;
             this.gapEnd -= shiftDistance;
         } 
@@ -62,6 +63,7 @@ public class GapBuffer {
 
     public void printNonGapText() {
         List<Character> myList = new ArrayList<>();
+        System.out.println(this);
         for (int i = 0; i < this.buffer.length; i++) {
             if (i < this.gapStart || i > this.gapEnd) {
                 myList.add(this.buffer[i]);
@@ -90,4 +92,8 @@ public class GapBuffer {
     public int getBufferSize(){
         return this.buffer.length;
     }
+
+    public int getGapSize() {
+        return this.gapEnd - this.gapStart;
+        }
 }

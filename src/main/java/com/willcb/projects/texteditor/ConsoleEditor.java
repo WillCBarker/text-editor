@@ -31,9 +31,9 @@ public class ConsoleEditor {
                         System.out.println("Enter");
                         break;
                     case 0x08: // Backspace Key (VK_BACK)
-                        if (gapBuffer.getGapStart() > 0) {
-                            gapBuffer.delete();
-                            cursor.setPosition(--cursorPosition);
+                        if (cursorPosition >= 0) {
+                            cursor.setPosition(Math.max(cursorPosition-1, 0));
+                            gapBuffer.delete(cursorPosition);
                         }
                         break;
                     case 0x25: // Left Arrow key (VK_LEFT)
@@ -52,6 +52,7 @@ public class ConsoleEditor {
                         cursor.setPosition(++cursorPosition);
                         break;
                 }
+                System.out.println("GS: " + gapBuffer.getGapStart() + " GE: " + gapBuffer.getGapEnd() + " Cursor: " + cursor.getPosition());
                 gapBuffer.printNonGapText();
             }
         }
