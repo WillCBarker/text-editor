@@ -54,6 +54,6 @@ public class Document {
 
     public void showText() {
         System.out.println("Cursor: " + this.cursor.getPosition());
-        this.gapBuffer.printNonGapText();
+        System.out.println(this.gapBuffer.getNonGapText());
     }
 }

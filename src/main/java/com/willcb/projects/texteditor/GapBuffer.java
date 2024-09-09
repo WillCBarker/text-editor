@@ -61,19 +61,19 @@ public class GapBuffer {
         } 
     }
 
-    public void printNonGapText() {
-        List<Character> myList = new ArrayList<>();
-        for (int i = 0; i < this.buffer.length; i++) {
-            if ((i < this.gapStart || i > this.gapEnd) && this.buffer[i] != '\0') {
-                myList.add(this.buffer[i]);
-            }
-        }
-        System.out.println(myList);
-    }
-
     @Override
     public String toString() {
         return Arrays.toString(this.buffer);
+    }
+
+    public List<Character> getNonGapText() {
+        List<Character> nonGapList = new ArrayList<>();
+        for (int i = 0; i < this.buffer.length; i++) {
+            if ((i < this.gapStart || i > this.gapEnd) && this.buffer[i] != '\0') {
+                nonGapList.add(this.buffer[i]);
+            }
+        }
+        return nonGapList;
     }
 
     public char[] getBuffer() {
