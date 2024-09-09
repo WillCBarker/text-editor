@@ -9,10 +9,10 @@ public class GapBuffer {
     private int gapStart; 
     private int gapEnd;
 
-    public GapBuffer() {
-        this.buffer = new char[50];
+    public GapBuffer(int bufferSize) {
+        this.buffer = new char[bufferSize];
         this.gapStart = 0;
-        this.gapEnd = 10;
+        this.gapEnd = 40;
     }
 
     public void delete(int cursorPosition) {
@@ -63,9 +63,8 @@ public class GapBuffer {
 
     public void printNonGapText() {
         List<Character> myList = new ArrayList<>();
-        System.out.println(this);
         for (int i = 0; i < this.buffer.length; i++) {
-            if (i < this.gapStart || i > this.gapEnd) {
+            if ((i < this.gapStart || i > this.gapEnd) && this.buffer[i] != '\0') {
                 myList.add(this.buffer[i]);
             }
         }
