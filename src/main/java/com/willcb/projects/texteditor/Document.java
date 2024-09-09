@@ -4,8 +4,8 @@ public class Document {
     private Cursor cursor;
     private GapBuffer gapBuffer;
 
-    public Document() {
-        this.gapBuffer = new GapBuffer();
+    public Document(GapBuffer gapBuffer) {
+        this.gapBuffer = gapBuffer;
         this.cursor = new Cursor(0);
     }
 
