@@ -8,17 +8,17 @@ import com.sun.jna.ptr.IntByReference;
 
 public class ConsoleEditor {
     public static void main(String[] args) {
-        Document document = new Document();
+        GapBuffer gapBuffer = FileHandler.LoadFileIntoBuffer("");
+        Document document = new Document(gapBuffer);
 
         HANDLE hConsoleInput = Kernel32.INSTANCE.GetStdHandle(Wincon.STD_INPUT_HANDLE);
         // Use hConsole to read input and write output
 
         INPUT_RECORD[] record = new INPUT_RECORD[1];
         IntByReference eventsRead = new IntByReference(0);
-
+        document.showText();
         while (true) {
             Kernel32.INSTANCE.ReadConsoleInput(hConsoleInput, record, 1, eventsRead);
-            System.out.println(record[0].Event.KeyEvent);
             KEY_EVENT_RECORD keyEvent = record[0].Event.KeyEvent;
 
             if (keyEvent.bKeyDown) {
@@ -26,7 +26,7 @@ public class ConsoleEditor {
 
                 switch (keyEvent.wVirtualKeyCode) {
                     case 0x0D: // Enter key (VK_RETURN)
-                        System.out.println("Enter");
+                        document.addCharacter('\n');
                         break;
                     case 0x08: // Backspace Key (VK_BACK)
                         document.deleteCharacter();
