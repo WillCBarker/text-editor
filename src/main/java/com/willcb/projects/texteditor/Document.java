@@ -9,29 +9,43 @@ public class Document {
         this.cursor = new Cursor(0);
     }
 
-    public void arrowKeyHandler(String action) {
+    /**
+     * Handles arrow key movements based on the provided action character.
+     * 
+     * This method processes the directional input ('u' for up, 'd' for down,
+     * 'l' for left, 'r' for right) and moves the cursor accordingly.
+     * 
+     * @param action A character representing the direction of the arrow key:
+     *               'u' for up, 'd' for down, 'l' for left, and 'r' for right.
+     */
+    public void arrowKeyHandler(char action) {
         switch (action) {
-            case "up":
+            case 'u':
                 cursor.moveUp();
                 break;
-            case "down":
+            case 'd':
                 cursor.moveDown();
                 break;
-            case "left":
+            case 'l':
                 cursor.moveLeft();
                 break;
-            case "right":
+            case 'r':
                 cursor.moveRight();
                 break;
         }
     }
-
+    
     /**
-     * Adds a character at the current cursor position within the document.
-     * If the cursor is at a valid position, the character is inserted at that position.
-     * After insertion, the cursor moves to the next column.
-     *
-     * @param character The character to be added to the document.
+     * Inserts a character at the current cursor position in the document.
+     * 
+     * If the character is not a newline ('\n'), it is inserted into the gap buffer, and the 
+     * cursor is moved one position to the right. 
+     * 
+     * If the character is a newline ('\n'), the current line is split at the cursor position:
+     * the text after the cursor becomes part of the new line. The cursor then moves to 
+     * the beginning of the next line, and the gap buffer is updated accordingly.
+     * 
+     * @param character The character to insert at the current cursor position.
      */
     public void addCharacter(Character character) {
         int cursorPosition = cursor.getPosition();
@@ -41,42 +55,50 @@ public class Document {
         gapBuffer.insert(character, cursorPosition);
         
         if (character != '\n') {
-            // When adding a regular character, update the line length and move the cursor
+            // Adding non-return type character
             cursor.moveToNextCharacter();
         } else {
-            // If adding a newline character:
+            // Return character 
             int lineLength = cursor.getLineLength(currentLineNum);
-            // 1. Update the current line length before moving to the next line
-            cursor.updateLine(currentLineNum, currentColumn);
-            
-            // 2. Insert a new line in lineLengthInfo for the next line with an initial length of 0
-            cursor.insertLine(currentLineNum + 1, lineLength);
-            
-            // 3. Move the cursor to the next line
-            cursor.moveToNextLine();
-            
-            // 4. Update the cursor position
-            cursor.setPosition(++cursorPosition);
+            cursor.modifyLineLength(currentLineNum, currentColumn);
+            cursor.insertLine(currentLineNum + 1, lineLength - currentColumn);
+            cursor.moveToNextLine();            
+            // cursor.setPosition(++cursorPosition); // Was active in last iteration (end of 9/10)
         }
     }
     
-
+    /**
+     * Deletes the character at the current cursor position.
+     * 
+     * If the cursor is positioned within a line, the character at that position is deleted 
+     * and the cursor moves left. The line's length is updated accordingly.
+     * 
+     * If the cursor is at the beginning of a line and there are previous lines, 
+     * the current line is merged with the previous line. The cursor moves to the previous 
+     * line and the lengths of both lines are adjusted in the lineLengthInfo.
+     */
     public void deleteCharacter() {
         int cursorPosition = cursor.getPosition();
         int currentLine = cursor.getCurrentLineNum();
+        int currentLineLength = cursor.getLineLength(currentLine);
         if (cursorPosition > 0 && cursor.getCurrentColumn() > 0) {
             gapBuffer.delete(cursorPosition);
             cursor.moveLeft();
-            cursor.updateLine(currentLine, cursor.getLineLength(currentLine) - 1);
-        } else if (cursor.getCurrentLineNum() > 0) {
+            cursor.modifyLineLength(currentLine, currentLineLength - 1);
+        } else if (currentLine > 0) {
             gapBuffer.delete(cursorPosition);
             cursor.moveLeft();
-            cursor.updateLine(currentLine - 1, cursor.getLineLength(currentLine-1) + cursor.getLineLength(currentLine));
-            cursor.removeLine(currentLine);
-            // cursor.moveLeft();
+            cursor.modifyLineLength(currentLine - 1, cursor.getLineLength(currentLine - 1) + currentLineLength);
+            cursor.deleteLine(currentLine);
         }
     }
 
+    /**
+     * Resets the cursor position and related values to the top-left of the document (0,0).
+     * 
+     * This method is typically used to initialize or reset the cursor after loading files 
+     * into the GapBuffer, ensuring the cursor starts at the beginning.
+     */
     public void reset() {
         cursor.setPosition(0);
         cursor.setCurrentColumn(0);
@@ -84,6 +106,15 @@ public class Document {
         cursor.setDesiredColumn(0);
     }
 
+    /**
+     * Displays the current text from the Ga pBuffer and cursor information.
+     * 
+     * - Prints the non-gap text, current line number, column, and cursor position.
+     * - Displays the length of the current line and all line lengths.
+     * - Moves the terminal cursor to the correct position using ANSI escape sequences.
+     * 
+     * This method is used to render the buffer and update the terminal view.
+     */
     public void showText() {
         gapBuffer.displayNonGapText();
         System.out.println("LINE NUMBER: " + cursor.getCurrentLineNum() + " | COL: " + cursor.getCurrentColumn() + " | Pos: " + cursor.getPosition());
