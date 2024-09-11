@@ -1,9 +1,6 @@
-- Have main loop accepting inputs, print out gap buffer after every input.
-    1. Read and load text file into gap buffer. DONE
-    2. Catch newline characters and have gapbuffer handle that DONE
-    3. Save changes to file. BOTH DONE
-        - Normal Save
-        - Save AS
-    4. Add cursor up and down arrow functionality.
+- Fix command mode format (Prompt places cursor at last point of use and should be at bottom)
+- Add border to ui
+- Add some color to ui
+- Add more commands
     
 - Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
