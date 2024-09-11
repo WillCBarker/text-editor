@@ -56,16 +56,16 @@ public class ConsoleEditor {
                     document.deleteCharacter();
                     break;
                 case 0x25: // Left arrow key
-                    document.arrowKeyHandler("left");
+                    document.arrowKeyHandler('l');
                     break;
                 case 0x26: // Up arrow key
-                    document.arrowKeyHandler("up");
+                    document.arrowKeyHandler('u');
                     break;
                 case 0x27: // Right arrow key
-                    document.arrowKeyHandler("right");
+                    document.arrowKeyHandler('r');
                     break;
                 case 0x28: // Down arrow key
-                    document.arrowKeyHandler("down");
+                    document.arrowKeyHandler('d');
                     break;
             }
         } else {
