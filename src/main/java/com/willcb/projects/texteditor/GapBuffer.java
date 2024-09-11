@@ -66,6 +66,14 @@ public class GapBuffer {
         return Arrays.toString(this.buffer);
     }
 
+    public void displayNonGapText() {
+        for (int i = 0; i < this.buffer.length; i++) {
+            if ((i < this.gapStart || i > this.gapEnd) && this.buffer[i] != '\0') {
+                System.out.print(this.buffer[i]);
+            }
+        }
+    }
+
     public List<Character> getNonGapText() {
         List<Character> nonGapList = new ArrayList<>();
         for (int i = 0; i < this.buffer.length; i++) {

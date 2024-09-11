@@ -9,7 +9,7 @@ import java.io.IOException;
 // HANDLES READING FILE INTO GAP BUFFER, SAVING GAP BUFFER INTO FILE, ETC.
 public class FileHandler {
     
-    public static GapBuffer LoadFileIntoBuffer(String filePath) {
+    public static Document LoadFileIntoBuffer(String filePath) {
         GapBuffer gapBuffer = new GapBuffer(200);
         Document document = new Document(gapBuffer);
         try {
@@ -30,7 +30,8 @@ public class FileHandler {
             System.out.println("File Not Found!");
 
         }
-        return gapBuffer;
+        document.reset();
+        return document;
     }
 
     public static void saveFile(String filePath, GapBuffer gapBuffer) {

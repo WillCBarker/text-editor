@@ -10,19 +10,20 @@ import java.util.Scanner;
 public class ConsoleEditor {
     private static Document document; // Keep the document as an instance variable
     private static GapBuffer gapBuffer;
-    
+    public static final String CLEAR_SCREEN = "\033[2J";
+    public static final String MOVE_CURSOR_HOME = "\033[H";
     public static void main(String[] args) {
         String filePath = "C:\\Users\\Willb\\Desktop\\text-editor\\test.txt";
-        gapBuffer = FileHandler.LoadFileIntoBuffer(filePath);
-        document = new Document(gapBuffer);
-
+        document = FileHandler.LoadFileIntoBuffer(filePath);
+        // document = new Document(gapBuffer);
         HANDLE hConsoleInput = Kernel32.INSTANCE.GetStdHandle(Wincon.STD_INPUT_HANDLE);
         INPUT_RECORD[] record = new INPUT_RECORD[1];
         IntByReference eventsRead = new IntByReference(0);
 
         // Display initially loaded file to user
+        System.out.print(CLEAR_SCREEN + MOVE_CURSOR_HOME);
         document.showText();
-        
+        System.out.print(MOVE_CURSOR_HOME);
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
@@ -34,7 +35,6 @@ public class ConsoleEditor {
                     System.out.print(":");
                     String command = scanner.nextLine(); // Read full command
                     processCommand(command, filePath);
-                    document.showText(); // Refresh the document display
                 } else {
                     handleTextEditing(keyEvent);
                 }
@@ -44,27 +44,46 @@ public class ConsoleEditor {
 
     private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
         char keyChar = keyEvent.uChar;
-        switch (keyEvent.wVirtualKeyCode) {
-            case 0x0D: // Enter key
-                document.addCharacter('\n');
-                break;
-            case 0x08: // Backspace key
-                document.deleteCharacter();
-                break;
-            case 0x25: // Left arrow key
-                document.arrowKeyHandler("left");
-                break;
-            case 0x27: // Right arrow key
-                document.arrowKeyHandler("right");
-                break;
-            default: // Insert character
-                document.addCharacter(keyChar);
-                break;
+        
+        // Check if the keyChar is a printable character
+        if (Character.isISOControl(keyChar)) {
+            // Handle control keys (Enter, Backspace, Arrow keys, etc.)
+            switch (keyEvent.wVirtualKeyCode) {
+                case 0x0D: // Enter key
+                    document.addCharacter('\n');
+                    break;
+                case 0x08: // Backspace key
+                    document.deleteCharacter();
+                    break;
+                case 0x25: // Left arrow key
+                    document.arrowKeyHandler("left");
+                    break;
+                case 0x26: // Up arrow key
+                    document.arrowKeyHandler("up");
+                    break;
+                case 0x27: // Right arrow key
+                    document.arrowKeyHandler("right");
+                    break;
+                case 0x28: // Down arrow key
+                    document.arrowKeyHandler("down");
+                    break;
+            }
+        } else {
+            // Only process actual printable characters
+            document.addCharacter(keyChar);
         }
+
+        // Refresh the screen
+        System.out.print(CLEAR_SCREEN + MOVE_CURSOR_HOME);
         document.showText();
+        System.out.flush();
     }
 
+
     private static void processCommand(String command, String filePath) {
+        System.out.print(CLEAR_SCREEN);
+        document.showText();
+        System.out.flush();
         switch (command) {
             case "w":
                 FileHandler.saveFile(filePath, gapBuffer);

@@ -10,20 +10,18 @@ public class Document {
     }
 
     public void arrowKeyHandler(String action) {
-        int cursorPosition = cursor.getPosition();
         switch (action) {
+            case "up":
+                cursor.moveUp();
+                break;
+            case "down":
+                cursor.moveDown();
+                break;
             case "left":
-                System.out.println("LEFT" + (cursorPosition - 1));
-                if (cursorPosition > 0) {
-                    cursor.setPosition(cursorPosition - 1);
-                }
+                cursor.moveLeft();
                 break;
             case "right":
-                System.out.println("RIGHT" + (cursorPosition + 1));
-
-                if (cursorPosition < gapBuffer.getBufferSize()) {
-                    cursor.setPosition(cursorPosition + 1);
-                }
+                cursor.moveRight();
                 break;
         }
     }
@@ -37,23 +35,62 @@ public class Document {
      */
     public void addCharacter(Character character) {
         int cursorPosition = cursor.getPosition();
-
-        System.out.println("Key: " + character);
-        this.gapBuffer.insert(character, cursorPosition);
-        cursor.setPosition(++cursorPosition);
+        int currentLineNum = cursor.getCurrentLineNum();
+        int currentColumn = cursor.getCurrentColumn();
+        
+        gapBuffer.insert(character, cursorPosition);
+        
+        if (character != '\n') {
+            // When adding a regular character, update the line length and move the cursor
+            cursor.moveToNextCharacter();
+        } else {
+            // If adding a newline character:
+            int lineLength = cursor.getLineLength(currentLineNum);
+            // 1. Update the current line length before moving to the next line
+            cursor.updateLine(currentLineNum, currentColumn);
+            
+            // 2. Insert a new line in lineLengthInfo for the next line with an initial length of 0
+            cursor.insertLine(currentLineNum + 1, lineLength);
+            
+            // 3. Move the cursor to the next line
+            cursor.moveToNextLine();
+            
+            // 4. Update the cursor position
+            cursor.setPosition(++cursorPosition);
+        }
     }
+    
 
     public void deleteCharacter() {
         int cursorPosition = cursor.getPosition();
-
-        if (cursorPosition >= 0) {
-            cursor.setPosition(Math.max(cursorPosition-1, 0));
+        int currentLine = cursor.getCurrentLineNum();
+        if (cursorPosition > 0 && cursor.getCurrentColumn() > 0) {
             gapBuffer.delete(cursorPosition);
+            cursor.moveLeft();
+            cursor.updateLine(currentLine, cursor.getLineLength(currentLine) - 1);
+        } else if (cursor.getCurrentLineNum() > 0) {
+            gapBuffer.delete(cursorPosition);
+            cursor.moveLeft();
+            cursor.updateLine(currentLine - 1, cursor.getLineLength(currentLine-1) + cursor.getLineLength(currentLine));
+            cursor.removeLine(currentLine);
+            // cursor.moveLeft();
         }
     }
 
+    public void reset() {
+        cursor.setPosition(0);
+        cursor.setCurrentColumn(0);
+        cursor.setCurrentLineNum(0);
+        cursor.setDesiredColumn(0);
+    }
+
     public void showText() {
-        System.out.println("Cursor: " + this.cursor.getPosition());
-        System.out.println(this.gapBuffer.getNonGapText());
+        gapBuffer.displayNonGapText();
+        System.out.println("LINE NUMBER: " + cursor.getCurrentLineNum() + " | COL: " + cursor.getCurrentColumn() + " | Pos: " + cursor.getPosition());
+        System.out.println("Current Line Len: " + cursor.getLineLength(cursor.getCurrentLineNum()) + " ARR: " + cursor.getLineLengthInfo());
+        int row = cursor.getCurrentLineNum() + 1;
+        int col = cursor.getCurrentColumn() + 1;
+        String seq = "\033[" + row + ";" + col + "H";
+        System.out.print(seq);
     }
 }
