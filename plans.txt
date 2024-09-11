@@ -1,4 +1,5 @@
 - Fix command mode format (Prompt places cursor at last point of use and should be at bottom)
+- Add diplay buffer for smoother editing, maybe implement caching to accomplish?
 - Add border to ui
 - Add some color to ui
 - Add more commands
