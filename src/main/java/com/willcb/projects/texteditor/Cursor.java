@@ -28,7 +28,7 @@ public class Cursor {
         }
         position++;
         currentColumn++;
-        updateLine(currentLineNum, getLineLength(currentLineNum) + 1);
+        modifyLineLength(currentLineNum, getLineLength(currentLineNum) + 1);
         desiredColumn = currentColumn;
     }
 
@@ -59,7 +59,6 @@ public class Cursor {
         if (currentColumn > 0) {
             currentColumn--;
             position--;
-            // updateLine(currentLineNum, getLineLength(currentLineNum) - 1);
         } else if (currentLineNum > 0) {
             moveToPreviousLine();
         }
@@ -86,15 +85,8 @@ public class Cursor {
 
             // Find whether above line is shorter than desired position, assign to min
             currentColumn = Math.min(desiredColumn, getLineLength(currentLineNum));
-
             int ColNewLineLenDiff = Math.max(getLineLength(currentLineNum), currentColumn) - Math.min(getLineLength(currentLineNum), currentColumn);
             position -= ColNewLineLenDiff;
-
-            // int distanceToPreviousLineEnd = getLineLength(currentLineNum - 1) - Math.min(getLineLength(currentLineNum - 1), currentColumn);
-            // currentLineNum--;
-            // position -= distanceToPreviousLineEnd;
-            // currentColumn = Math.min(desiredColumn, getLineLength(currentLineNum));
-            // position -= currentColumn;
             position -= 1;
         }
     }
@@ -108,7 +100,7 @@ public class Cursor {
         }
     }
 
-    public void updateLine(int lineIndex, int columnLength) {
+    public void modifyLineLength(int lineIndex, int columnLength) {
         lineLengthInfo.set(lineIndex, columnLength);
     }
 
@@ -116,7 +108,7 @@ public class Cursor {
         lineLengthInfo.add(lineIndex, columnLength);
     }
 
-    public void removeLine(int lineIndex) {
+    public void deleteLine(int lineIndex) {
         lineLengthInfo.remove(lineIndex);
     }
 
@@ -155,8 +147,8 @@ public class Cursor {
         return desiredColumn;
     }
 
-    public void setDesiredColumn(int desiredColumn) {
-        desiredColumn = desiredColumn;
+    public void setDesiredColumn(int column) {
+        desiredColumn = column;
     }
 
 
