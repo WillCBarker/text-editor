@@ -9,6 +9,10 @@ public class Document {
         this.cursor = new Cursor(0);
     }
 
+    public Cursor getCursor() {
+        return cursor;
+    }
+
     /**
      * Handles arrow key movements based on the provided action character.
      * 

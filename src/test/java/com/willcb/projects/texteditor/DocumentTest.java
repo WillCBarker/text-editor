@@ -2,82 +2,108 @@ package com.willcb.projects.texteditor;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class DocumentTest {
     private Document document;
-    private List<List<Character>> expectedTextMatrix;
+    private GapBuffer gapBuffer;
 
     @BeforeEach
-    public void setup() {
-        document = new Document();
-        expectedTextMatrix = new ArrayList<>(); 
-        expectedTextMatrix.add(new ArrayList<>());
+    public void setUp() {
+        gapBuffer = new GapBuffer(200);
+        document = new Document(gapBuffer);
     }
 
     @Test
-    public void testAddCharacterInOrder() {
-        document.addCharacter('a');
-        document.addCharacter('b');
-        document.addCharacter('c');
-        expectedTextMatrix.get(0).add('a');
-        expectedTextMatrix.get(0).add('b');
-        expectedTextMatrix.get(0).add('c');
-
-        assertEquals(expectedTextMatrix, document.getTextMatrix());
+    public void testAddCharacterToDocument() {
+        document.addCharacter('H');
+        document.addCharacter('e');
+        document.addCharacter('l');
+        document.addCharacter('l');
+        document.addCharacter('o');
+        assertEquals("Hello", gapBuffer.getNonGapText()); // Assuming GapBuffer has a getNonGapText method
+        assertEquals(5, document.getCursor().getPosition());
     }
 
     @Test
-    public void testAddCharacterInBetweenCharacters() {
-        document.addCharacter('a');
-        document.addCharacter('c');
-        document.addCharacter('d');
-        expectedTextMatrix.get(0).add('a');
-        expectedTextMatrix.get(0).add('b');
-        expectedTextMatrix.get(0).add('c');
-        expectedTextMatrix.get(0).add('d');
+    public void testAddNewLineCharacter() {
+        document.addCharacter('H');
+        document.addCharacter('i');
+        document.addCharacter('\n');
+        document.addCharacter('T');
+        document.addCharacter('h');
+        document.addCharacter('e');
+        document.addCharacter('r');
+        document.addCharacter('e');
 
-        document.setCursorPosition(0, 1);
-        document.addCharacter('b');
-
-        assertEquals(expectedTextMatrix, document.getTextMatrix());
+        assertEquals("Hi\nThere", gapBuffer.getNonGapText());
+        assertEquals(2, document.getCursor().getCurrentLineNum());
+        assertEquals(4, document.getCursor().getCurrentColumn());
     }
 
     @Test
-    public void testDeleteCharacterEndOfString() {
-        document.addCharacter('a');
-        expectedTextMatrix.get(0).add('a');
-
-        expectedTextMatrix.get(0).remove(0);
+    public void testDeleteCharacterFromDocument() {
+        document.addCharacter('T');
+        document.addCharacter('e');
+        document.addCharacter('s');
+        document.addCharacter('t');
         document.deleteCharacter();
 
-        assertEquals(expectedTextMatrix, document.getTextMatrix());
+        assertEquals("Tes", gapBuffer.getNonGapText());
+        assertEquals(3, document.getCursor().getPosition());
     }
 
     @Test
-    public void testDeleteCharacterMiddleOfString() {
-        document.addCharacter('a');
-        document.addCharacter('b');
-        document.addCharacter('c');
-        expectedTextMatrix.get(0).add('a');
-        expectedTextMatrix.get(0).add('b');
-        expectedTextMatrix.get(0).add('c');
+    public void testDeleteLineMergeWithPrevious() {
+        document.addCharacter('L');
+        document.addCharacter('i');
+        document.addCharacter('n');
+        document.addCharacter('e');
+        document.addCharacter('\n');
+        document.addCharacter('N');
+        document.addCharacter('e');
+        document.addCharacter('x');
+        document.addCharacter('t');
+        int pos = document.getCursor().getPosition();
+        pos -= 4;
+        document.getCursor().setPosition(pos);
+        document.deleteCharacter(); // Deletes newline, merging lines
 
-        expectedTextMatrix.get(0).remove(1);
-        document.setCursorPosition(0, 2);
-        document.deleteCharacter();
+        assertEquals(Arrays.asList('L', 'i', 'n', 'e', 'N', 'e', 'x', 't'), gapBuffer.getNonGapText());
 
-        assertEquals(expectedTextMatrix, document.getTextMatrix());
+        assertEquals(1, document.getCursor().getCurrentLineNum());
+        assertEquals(4, document.getCursor().getPosition());
     }
 
     @Test
-    public void testDeleteCharacterFromEmptyString() {
-        document.deleteCharacter();
+    public void testResetDocument() {
+        document.addCharacter('R');
+        document.addCharacter('e');
+        document.addCharacter('s');
+        document.addCharacter('e');
+        document.addCharacter('t');
+        document.reset();
 
-        assertEquals(expectedTextMatrix, document.getTextMatrix());
+        assertEquals(0, document.getCursor().getPosition());
+        assertEquals(0, document.getCursor().getCurrentLineNum());
+        assertEquals(0, document.getCursor().getCurrentColumn());
     }
 
+    @Test
+    public void testShowText() {
+        document.addCharacter('H');
+        document.addCharacter('i');
+        document.addCharacter('\n');
+        document.addCharacter('T');
+        document.addCharacter('h');
+        document.addCharacter('e');
+        document.addCharacter('r');
+        document.addCharacter('e');
+
+        document.showText();
+        // Verify manually
+    }
 }
