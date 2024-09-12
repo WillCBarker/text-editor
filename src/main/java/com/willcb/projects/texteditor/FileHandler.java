@@ -30,7 +30,7 @@ public class FileHandler {
             System.out.println("File Not Found!");
 
         }
-        document.reset();
+        document.resetCursorPosition();
         return document;
     }
 

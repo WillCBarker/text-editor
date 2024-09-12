@@ -8,6 +8,10 @@ public class Document {
         this.gapBuffer = gapBuffer;
         this.cursor = new Cursor(0);
     }
+    
+    public GapBuffer getGapBuffer() {
+        return gapBuffer;
+    }
 
     public Cursor getCursor() {
         return cursor;
@@ -103,7 +107,7 @@ public class Document {
      * This method is typically used to initialize or reset the cursor after loading files 
      * into the GapBuffer, ensuring the cursor starts at the beginning.
      */
-    public void reset() {
+    public void resetCursorPosition() {
         cursor.setPosition(0);
         cursor.setCurrentColumn(0);
         cursor.setCurrentLineNum(0);
