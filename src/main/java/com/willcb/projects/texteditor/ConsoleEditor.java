@@ -15,20 +15,8 @@ public class ConsoleEditor {
         String filePath = "C:\\Users\\Willb\\Desktop\\text-editor\\test.txt";
         document = FileHandler.LoadFileIntoBuffer(filePath);
 
-        // TO BE REMOVED
-        // document = new Document(gapBuffer);
-        // HANDLE hConsoleInput = Kernel32.INSTANCE.GetStdHandle(Wincon.STD_INPUT_HANDLE);
-        // INPUT_RECORD[] record = new INPUT_RECORD[1];
-        // IntByReference eventsRead = new IntByReference(0);
-
-        // Display initially loaded file to user
         reloadTerminalDisplay();
         Scanner scanner = new Scanner(System.in);
-        
-        while (true) {
-            // TO BE REMOVED
-            // Kernel32.INSTANCE.ReadConsoleInput(hConsoleInput, record, 1, eventsRead);
-            // KEY_EVENT_RECORD keyEvent = record[0].Event.KeyEvent;
 
             KEY_EVENT_RECORD keyEvent = initializeConsoleInstance();
             
