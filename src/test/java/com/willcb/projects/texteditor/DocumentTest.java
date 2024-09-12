@@ -24,7 +24,7 @@ public class DocumentTest {
         document.addCharacter('l');
         document.addCharacter('l');
         document.addCharacter('o');
-        assertEquals("Hello", gapBuffer.getNonGapText()); // Assuming GapBuffer has a getNonGapText method
+        assertEquals(Arrays.asList('H', 'e', 'l', 'l', 'o'), gapBuffer.getNonGapText()); // Assuming GapBuffer has a getNonGapText method
         assertEquals(5, document.getCursor().getPosition());
     }
 
@@ -39,9 +39,9 @@ public class DocumentTest {
         document.addCharacter('r');
         document.addCharacter('e');
 
-        assertEquals("Hi\nThere", gapBuffer.getNonGapText());
-        assertEquals(2, document.getCursor().getCurrentLineNum());
-        assertEquals(4, document.getCursor().getCurrentColumn());
+        assertEquals(Arrays.asList('H', 'i', '\n', 'T', 'h', 'e', 'r', 'e'), gapBuffer.getNonGapText());
+        assertEquals(1, document.getCursor().getCurrentLineNum());
+        assertEquals(5, document.getCursor().getCurrentColumn());
     }
 
     @Test
@@ -52,7 +52,7 @@ public class DocumentTest {
         document.addCharacter('t');
         document.deleteCharacter();
 
-        assertEquals("Tes", gapBuffer.getNonGapText());
+        assertEquals(Arrays.asList('T', 'e', 's'), gapBuffer.getNonGapText());
         assertEquals(3, document.getCursor().getPosition());
     }
 
@@ -85,7 +85,7 @@ public class DocumentTest {
         document.addCharacter('s');
         document.addCharacter('e');
         document.addCharacter('t');
-        document.reset();
+        document.resetCursorPosition();
 
         assertEquals(0, document.getCursor().getPosition());
         assertEquals(0, document.getCursor().getCurrentLineNum());
