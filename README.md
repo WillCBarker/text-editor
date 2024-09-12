@@ -24,7 +24,9 @@ A console-based text editor built with Java, utilizing a gap buffer for efficien
    git clone https://github.com/yourusername/console-text-editor.git
 
 2. Build the project using Maven:
-   ```mvn clean install```
+   ```
+   mvn clean install
 
-3. Run the project with:
-   ```mvn exec:java -Dexec.mainClass=com.willcb.projects.texteditor.TerminalTextEditor```
+4. Run the project with:
+   ```
+   mvn exec:java -Dexec.mainClass=com.willcb.projects.texteditor.TerminalTextEditor
