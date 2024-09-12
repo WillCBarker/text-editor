@@ -1,32 +1,24 @@
 package com.willcb.projects.texteditor;
-import com.sun.jna.platform.win32.Kernel32;
-import com.sun.jna.platform.win32.Wincon;
-import com.sun.jna.platform.win32.WinNT.HANDLE;
-import com.sun.jna.platform.win32.Wincon.INPUT_RECORD;
 import com.sun.jna.platform.win32.Wincon.KEY_EVENT_RECORD;
-import com.sun.jna.ptr.IntByReference;
 import java.util.Scanner;
 
-public class ConsoleEditor {
+public class TerminalTextEditor {
     private static Document document; // Keep the document as an instance variable
-    public static final String CLEAR_SCREEN = "\033[2J";
-    public static final String MOVE_CURSOR_HOME = "\033[H";
+
     public static void main(String[] args) {
-        String filePath = "C:\\Users\\Willb\\Desktop\\text-editor\\test.txt";
+        String filePath = args[0];
         document = FileHandler.LoadFileIntoBuffer(filePath);
 
         reloadTerminalDisplay();
         Scanner scanner = new Scanner(System.in);
-        
-        while (true) {
 
-            KEY_EVENT_RECORD keyEvent = initializeConsoleInstance();
+        while (true) {
+            KEY_EVENT_RECORD keyEvent = Terminal.initializeConsoleInstance();
             
             if (keyEvent.bKeyDown) {
                 if (keyEvent.wVirtualKeyCode == 0x1B) { // Escape key
-                    System.out.print(":");
-                    String command = scanner.nextLine(); // Read full command
-                    processCommand(command, filePath);
+                    enterCommandMode(scanner, filePath);
+
                 } else {
                     handleTextEditing(keyEvent);
                 }
@@ -34,17 +26,17 @@ public class ConsoleEditor {
         }
     }
 
-    public static KEY_EVENT_RECORD initializeConsoleInstance() {
-        HANDLE hConsoleInput = Kernel32.INSTANCE.GetStdHandle(Wincon.STD_INPUT_HANDLE);
-        INPUT_RECORD[] record = new INPUT_RECORD[1];
-        IntByReference eventsRead = new IntByReference(0);
-        Kernel32.INSTANCE.ReadConsoleInput(hConsoleInput, record, 1, eventsRead);
-        KEY_EVENT_RECORD keyEvent = record[0].Event.KeyEvent;
-        return keyEvent;
+    public static void enterCommandMode(Scanner scanner, String filePath) {
+        int totalLines = document.getTotalLines();
+        Terminal.moveToBottomRow(totalLines + 1);
+        System.out.println();
+        System.out.print(":");
+        String command = scanner.nextLine();
+        processCommand(command, filePath);
     }
 
-    public static void reloadTerminalDisplay(){
-        System.out.print(CLEAR_SCREEN + MOVE_CURSOR_HOME);
+    public static void reloadTerminalDisplay() {
+        Terminal.clearScreenAndMoveCursorHome();
         document.showText();
         System.out.flush();
     }
@@ -90,18 +82,20 @@ public class ConsoleEditor {
         switch (command) {
             case "w":
                 FileHandler.saveFile(filePath, gapBuffer);
-                System.out.println("File saved.");
+                Terminal.clearScreenAndMoveCursorHome();
+                System.out.print("File saved.");
                 break;
             case "q":
-                System.out.println("Exiting editor...");
+                Terminal.clearScreenAndMoveCursorHome();
+                System.out.print("Exiting editor...");
                 System.exit(0);
                 break;
             case "wq":
                 FileHandler.saveFile(filePath, gapBuffer);
-                System.out.println("File saved. Exiting editor...");
+                Terminal.clearScreenAndMoveCursorHome();
+                System.out.print("File saved. Exiting editor...");
                 System.exit(0);
             default:
-                System.out.println("Unknown command: " + command);
                 break;
         }
     }

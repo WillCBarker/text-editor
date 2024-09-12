@@ -1,5 +1,7 @@
 package com.willcb.projects.texteditor;
 
+import java.util.List;
+
 public class Document {
     private Cursor cursor;
     private GapBuffer gapBuffer;
@@ -131,5 +133,10 @@ public class Document {
         int col = cursor.getCurrentColumn() + 1;
         String seq = "\033[" + row + ";" + col + "H";
         System.out.print(seq);
+    }
+
+    public int getTotalLines() {
+        List<Integer> LineLengthInfo = cursor.getLineLengthInfo();
+        return LineLengthInfo.size();
     }
 }
