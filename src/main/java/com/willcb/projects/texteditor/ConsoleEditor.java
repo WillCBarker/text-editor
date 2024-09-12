@@ -17,6 +17,8 @@ public class ConsoleEditor {
 
         reloadTerminalDisplay();
         Scanner scanner = new Scanner(System.in);
+        
+        while (true) {
 
             KEY_EVENT_RECORD keyEvent = initializeConsoleInstance();
             
