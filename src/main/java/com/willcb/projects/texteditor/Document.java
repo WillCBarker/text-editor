@@ -63,17 +63,17 @@ public class Document {
         int currentColumn = cursor.getCurrentColumn();
         
         gapBuffer.insert(character, cursorPosition);
-        
         if (character != '\n') {
             // Adding non-return type character
             cursor.moveToNextCharacter();
         } else {
             // Return character 
             int lineLength = cursor.getLineLength(currentLineNum);
+            
+            // Ensure to not insert into position out of bounds by getting minimum of array size and intended line + 1
+            cursor.insertLine(Math.min(cursor.getLineLengthInfo().size(), currentLineNum + 1), lineLength - currentColumn);
             cursor.modifyLineLength(currentLineNum, currentColumn);
-            cursor.insertLine(currentLineNum + 1, lineLength - currentColumn);
             cursor.moveToNextLine();            
-            // cursor.setPosition(++cursorPosition); // Was active in last iteration (end of 9/10)
         }
     }
     
@@ -103,12 +103,6 @@ public class Document {
         }
     }
 
-    /**
-     * Resets the cursor position and related values to the top-left of the document (0,0).
-     * 
-     * This method is typically used to initialize or reset the cursor after loading files 
-     * into the GapBuffer, ensuring the cursor starts at the beginning.
-     */
     public void resetCursorPosition() {
         cursor.setPosition(0);
         cursor.setCurrentColumn(0);
@@ -116,23 +110,26 @@ public class Document {
         cursor.setDesiredColumn(0);
     }
 
-    /**
-     * Displays the current text from the Ga pBuffer and cursor information.
-     * 
-     * - Prints the non-gap text, current line number, column, and cursor position.
-     * - Displays the length of the current line and all line lengths.
-     * - Moves the terminal cursor to the correct position using ANSI escape sequences.
-     * 
-     * This method is used to render the buffer and update the terminal view.
-     */
-    public void showText() {
-        gapBuffer.displayNonGapText();
+    public void showTextInfo() {
         System.out.println("LINE NUMBER: " + cursor.getCurrentLineNum() + " | COL: " + cursor.getCurrentColumn() + " | Pos: " + cursor.getPosition());
         System.out.println("Current Line Len: " + cursor.getLineLength(cursor.getCurrentLineNum()) + " ARR: " + cursor.getLineLengthInfo());
-        int row = cursor.getCurrentLineNum() + 1;
-        int col = cursor.getCurrentColumn() + 1;
-        String seq = "\033[" + row + ";" + col + "H";
-        System.out.print(seq);
+    }
+
+    public void displayText(){
+        List<Character> buffer = gapBuffer.getNonGapText();
+        Terminal.eraseLine();
+        for (int i = 0; i < buffer.size(); i++) {
+            char key = buffer.get(i);
+            System.out.print(key);
+            if (key == '\n') {
+                Terminal.eraseLine();
+            }
+        }
+        Terminal.setCursorTerminalPosition(cursor);
+    }
+
+    public List<Character> getDisplayedTextList() {
+        return gapBuffer.getNonGapText();
     }
 
     public int getTotalLines() {

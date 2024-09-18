@@ -16,14 +16,36 @@ public class Terminal {
         return record[0].Event.KeyEvent;
     }
 
+    public static void eraseLine() {
+        System.out.print("\033[2K");
+    }
 
-    public static void clearScreenAndMoveCursorHome() {
-        String CLEAR_SCREEN = "\033[2J";
+    public static void clearScreen() {
+        System.out.print("\033[2J");
+    }
+
+    public static void saveCursorTerminalPosition() {
+        System.out.print("\033[s");
+    }
+
+    public static void restoreCursorTerminalPosiiton() {
+        System.out.print("\033[u");
+
+    }
+    public static void moveCursorHome() {
         String MOVE_CURSOR_HOME = "\033[H";
-        System.out.print(CLEAR_SCREEN + MOVE_CURSOR_HOME);
+        System.out.print(MOVE_CURSOR_HOME);
     }
 
     public static void moveToBottomRow(int terminalRows) {
         System.out.print("\033[" + terminalRows + ";1H");
+    }
+
+    public static void setCursorTerminalPosition(Cursor cursor) {
+        int row = cursor.getCurrentLineNum() + 1;
+        int col = cursor.getCurrentColumn() + 1; 
+
+        String cursorPositionSeq = "\033[" + row + ";" + col + "H";
+        System.out.print(cursorPositionSeq);
     }
 }

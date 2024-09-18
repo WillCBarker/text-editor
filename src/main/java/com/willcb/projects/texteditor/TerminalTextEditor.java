@@ -1,5 +1,6 @@
 package com.willcb.projects.texteditor;
 import com.sun.jna.platform.win32.Wincon.KEY_EVENT_RECORD;
+
 import java.util.Scanner;
 
 public class TerminalTextEditor {
@@ -8,8 +9,8 @@ public class TerminalTextEditor {
     public static void main(String[] args) {
         String filePath = args[0];
         document = FileHandler.LoadFileIntoBuffer(filePath);
-
-        reloadTerminalDisplay();
+        Terminal.clearScreen();
+        updateTerminalDisplay();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
@@ -35,10 +36,13 @@ public class TerminalTextEditor {
         processCommand(command, filePath);
     }
 
-    public static void reloadTerminalDisplay() {
-        Terminal.clearScreenAndMoveCursorHome();
-        document.showText();
+    public static void updateTerminalDisplay() {
+        Terminal.setCursorTerminalPosition(document.getCursor());
+        Terminal.saveCursorTerminalPosition();
+        Terminal.moveCursorHome();
+        document.displayText();
         System.out.flush();
+        Terminal.restoreCursorTerminalPosiiton();
     }
 
     private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
@@ -68,31 +72,30 @@ public class TerminalTextEditor {
                     break;
             }
         } else {
-            // Only process actual printable characters
+            // Only process printable keys
             document.addCharacter(keyChar);
         }
-
-        reloadTerminalDisplay();
+        updateTerminalDisplay();
     }
 
-
     private static void processCommand(String command, String filePath) {
-        reloadTerminalDisplay();
+        updateTerminalDisplay();
         GapBuffer gapBuffer = document.getGapBuffer();
+        Terminal.moveCursorHome();
         switch (command) {
             case "w":
                 FileHandler.saveFile(filePath, gapBuffer);
-                Terminal.clearScreenAndMoveCursorHome();
+                Terminal.clearScreen();
                 System.out.print("File saved.");
                 break;
             case "q":
-                Terminal.clearScreenAndMoveCursorHome();
+                Terminal.clearScreen();
                 System.out.print("Exiting editor...");
                 System.exit(0);
                 break;
             case "wq":
                 FileHandler.saveFile(filePath, gapBuffer);
-                Terminal.clearScreenAndMoveCursorHome();
+                Terminal.clearScreen();
                 System.out.print("File saved. Exiting editor...");
                 System.exit(0);
             default:

@@ -65,17 +65,6 @@ public class GapBufferTest {
     }
 
     @Test
-    public void testDisplayNonGapText() {
-        gapBuffer.insert('h', 0);
-        gapBuffer.insert('e', 1);
-        gapBuffer.insert('l', 2);
-        gapBuffer.insert('l', 3);
-        gapBuffer.insert('o', 4);
-        gapBuffer.delete(2); // Delete 'l' at position 2
-        gapBuffer.displayNonGapText(); // Output should be "he__lo" in the console (gap represented by underscores)
-    }
-
-    @Test
     public void testGetNonGapText() {
         gapBuffer.insert('a', 0);
         gapBuffer.insert('b', 1);

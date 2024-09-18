@@ -35,9 +35,8 @@ public class Cursor {
     public void moveToNextLine() {
         currentLineNum++;
     
-        // Ensure the line exists in lineLengthInfo
         if (currentLineNum >= lineLengthInfo.size()) {
-            lineLengthInfo.add(0);  // Add a new line with length 0
+            lineLengthInfo.add(0);
         }
         
         currentColumn = 0;

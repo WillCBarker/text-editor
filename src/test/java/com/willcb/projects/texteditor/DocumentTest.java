@@ -103,7 +103,7 @@ public class DocumentTest {
         document.addCharacter('r');
         document.addCharacter('e');
 
-        document.showText();
+        // document.showText();
         // Verify manually
     }
 }

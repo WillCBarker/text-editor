@@ -1,5 +1,5 @@
-- Fix command mode format (Prompt places cursor at last point of use and should be at bottom)
-- Add diplay buffer for smoother editing, maybe implement caching to accomplish?
+- Convert key actions to enum class
+- Set borders for cursor so you can't move terminal cursor infinitely far away from text.
 - Add border to ui
 - Add some color to ui
 - Add more commands
@@ -8,3 +8,26 @@
 - turn key codes into enums for readability e.g. ENTER_KEY, UP_ARROW_KEY etc.
     
 - Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
+
+
+to be used info to reference:
+
+    public static void partialWriteToConsole(List<Character> buffer, Cursor cursor) {
+        HANDLE hConsoleOutput = Kernel32.INSTANCE.GetStdHandle(Kernel32.STD_OUTPUT_HANDLE);
+        String cursorPositionSeq = getCursorPositionSequence(cursor);
+
+        // Call WriteConsole to output the cursor position
+        IntByReference written = new IntByReference(0);
+
+        // Prepare the buffer to write to the console as a String
+        StringBuilder sb = new StringBuilder(buffer.size());
+        for (Character c : buffer) {
+            sb.append(c);
+        }
+        String output = sb.toString();
+
+        // Call WriteConsole to output the text
+        Kernel32.INSTANCE.WriteConsole(hConsoleOutput, output, output.length(), written, null);
+        Kernel32.INSTANCE.WriteConsole(hConsoleOutput, cursorPositionSeq, cursorPositionSeq.length(), written, null);
+
+    }
