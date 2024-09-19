@@ -63,17 +63,17 @@ public class Document {
         int currentColumn = cursor.getCurrentColumn();
         
         gapBuffer.insert(character, cursorPosition);
-        if (character != '\n') {
-            // Adding non-return type character
-            cursor.moveToNextCharacter();
-        } else {
+        if (character == '\n') {
             // Return character 
             int lineLength = cursor.getLineLength(currentLineNum);
-            
+
             // Ensure to not insert into position out of bounds by getting minimum of array size and intended line + 1
             cursor.insertLine(Math.min(cursor.getLineLengthInfo().size(), currentLineNum + 1), lineLength - currentColumn);
             cursor.modifyLineLength(currentLineNum, currentColumn);
-            cursor.moveToNextLine();            
+            cursor.moveToNextLine(); 
+        } else {
+            // Adding non-return type character
+            cursor.moveToNextCharacter();
         }
     }
     
