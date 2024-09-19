@@ -4,16 +4,16 @@ A console-based text editor built with Java, utilizing a gap buffer for efficien
 
 ## Features
 
-- **Gap Buffer Implementation**: Efficiently manages text storage and manipulation.
-- **Command Mode**: Use the Escape key to enter command mode for saving files, quitting, etc.
-- **Keyboard Input Handling**: Supports keyboard inputs for text navigation and editing.
-- **Cross-Platform Compatibility**: Built for Windows using JNA, with potential for expansion to other platforms.
+- **In-terminal Usability**: Designed to be used within the terminal for quick file manipulation.
+- **Efficient in-terminal usability**: File contents are stored in a gap buffer to minimize overhead and provide a lightweight, responsive experience up to ~1GB file sizes.
+- **Windows Support**: Built for Windows using JNA, planning on adding support for other platforms
 
 ## Getting Started
 
 ### Prerequisites
 
 - Java Development Kit (JDK) 8 or higher
+- Windows (for now)
 - Maven (for project management)
 
 ### Installation
