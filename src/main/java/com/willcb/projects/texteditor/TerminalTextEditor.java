@@ -1,6 +1,6 @@
 package com.willcb.projects.texteditor;
-import com.sun.jna.platform.win32.Wincon.KEY_EVENT_RECORD;
 
+import com.sun.jna.platform.win32.Wincon.KEY_EVENT_RECORD;
 import java.util.Scanner;
 
 public class TerminalTextEditor {
@@ -15,7 +15,7 @@ public class TerminalTextEditor {
 
         while (true) {
             KEY_EVENT_RECORD keyEvent = Terminal.initializeConsoleInstance();
-            
+
             if (keyEvent.bKeyDown) {
                 if (keyEvent.wVirtualKeyCode == 0x1B) { // Escape key
                     enterCommandMode(scanner, filePath);
@@ -46,7 +46,7 @@ public class TerminalTextEditor {
 
     private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
         char keyChar = keyEvent.uChar;
-        
+
         // Check if keyChar is printable
         if (Character.isISOControl(keyChar)) {
             handleControlKey(keyEvent);
@@ -59,7 +59,27 @@ public class TerminalTextEditor {
     private static void handleControlKey(KEY_EVENT_RECORD keyEvent) {
         KeyCode key = KeyCode.fromCode(keyEvent.wVirtualKeyCode);
         if (key != null) {
-            key.performAction(document);
+            switch (key) {
+                case ENTER:
+                    document.addCharacter('\n');
+                    break;
+                case BACKSPACE: // Backspace key
+                    document.deleteCharacter();
+                    break;
+                case LEFT_ARROW: // Left arrow key
+                    document.arrowKeyHandler('l');
+                    break;
+                case UP_ARROW: // Up arrow key
+                    document.arrowKeyHandler('u');
+                    break;
+                case RIGHT_ARROW: // Right arrow key
+                    document.arrowKeyHandler('r');
+                    break;
+                case DOWN_ARROW: // Down arrow key
+                    document.arrowKeyHandler('d');
+                    break;
+
+            }
         }
     }
 

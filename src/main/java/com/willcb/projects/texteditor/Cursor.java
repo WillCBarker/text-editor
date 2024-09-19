@@ -34,16 +34,15 @@ public class Cursor {
 
     public void moveToNextLine() {
         currentLineNum++;
-    
+
         if (currentLineNum >= lineLengthInfo.size()) {
             lineLengthInfo.add(0);
         }
-        
+
         currentColumn = 0;
         desiredColumn = 0;
         position++;
     }
-    
 
     public void moveToPreviousLine() {
         if (currentLineNum > 0) {
@@ -84,7 +83,8 @@ public class Cursor {
 
             // Find whether above line is shorter than desired position, assign to min
             currentColumn = Math.min(desiredColumn, getLineLength(currentLineNum));
-            int ColNewLineLenDiff = Math.max(getLineLength(currentLineNum), currentColumn) - Math.min(getLineLength(currentLineNum), currentColumn);
+            int ColNewLineLenDiff = Math.max(getLineLength(currentLineNum), currentColumn)
+                    - Math.min(getLineLength(currentLineNum), currentColumn);
             position -= ColNewLineLenDiff;
             position -= 1;
         }
@@ -149,6 +149,5 @@ public class Cursor {
     public void setDesiredColumn(int column) {
         desiredColumn = column;
     }
-
 
 }
