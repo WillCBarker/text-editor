@@ -64,7 +64,12 @@ public class Cursor {
     }
 
     public void moveRight() {
+        if (currentLineNum >= lineLengthInfo.size() - 1) {
+            return;
+        }
+
         if (currentColumn >= getLineLength(currentLineNum)) {
+            System.out.print("YO?");
             moveToNextLine();
         } else {
             currentColumn++;
@@ -91,7 +96,7 @@ public class Cursor {
     }
 
     public void moveDown() {
-        if (currentLineNum < lineLengthInfo.size()) {
+        if (currentLineNum < lineLengthInfo.size() - 1) {
             int distanceToLineEnd = getLineLength(currentLineNum) - currentColumn;
             currentLineNum++;
             currentColumn = Math.min(desiredColumn, getLineLength(currentLineNum));

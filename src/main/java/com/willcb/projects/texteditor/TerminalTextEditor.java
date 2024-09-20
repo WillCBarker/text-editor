@@ -63,22 +63,21 @@ public class TerminalTextEditor {
                 case ENTER:
                     document.addCharacter('\n');
                     break;
-                case BACKSPACE: // Backspace key
+                case BACKSPACE:
                     document.deleteCharacter();
                     break;
-                case LEFT_ARROW: // Left arrow key
+                case LEFT_ARROW:
                     document.arrowKeyHandler('l');
                     break;
-                case UP_ARROW: // Up arrow key
+                case UP_ARROW:
                     document.arrowKeyHandler('u');
                     break;
-                case RIGHT_ARROW: // Right arrow key
+                case RIGHT_ARROW:
                     document.arrowKeyHandler('r');
                     break;
-                case DOWN_ARROW: // Down arrow key
+                case DOWN_ARROW:
                     document.arrowKeyHandler('d');
                     break;
-
             }
         }
     }
