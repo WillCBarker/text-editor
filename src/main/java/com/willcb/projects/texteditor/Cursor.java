@@ -69,7 +69,6 @@ public class Cursor {
         }
 
         if (currentColumn >= getLineLength(currentLineNum)) {
-            System.out.print("YO?");
             moveToNextLine();
         } else {
             currentColumn++;
