@@ -1,11 +1,15 @@
-- Convert key actions to enum class
+- wipe screen after closing file
+
 - Set borders for cursor so you can't move terminal cursor infinitely far away from text.
+    - Print border on file loadup
+    - Pin live information (line number, column) to bottom row of terminal.
+- Add capability to create new file
 - Add border to ui
 - Add some color to ui
 - Add more commands
+- Simplify launch command (researchc this in tandem with creating downloadable software for path)
 
 - make console  editor/entry point super simple, modulate bigtime
-- turn key codes into enums for readability e.g. ENTER_KEY, UP_ARROW_KEY etc.
     
 - Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
 

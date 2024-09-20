@@ -27,11 +27,11 @@ public class TerminalTextEditor {
     }
 
     public static void enterCommandMode(Scanner scanner, String filePath) {
-        int totalLines = document.getTotalLines();
-        Terminal.moveToBottomRow(totalLines + 1);
-        System.out.println();
+        Terminal.moveToBottomRow(Terminal.getTerminalRows()-1);
         System.out.print(":");
         String command = scanner.nextLine();
+        Terminal.moveToBottomRow(Terminal.getTerminalRows()-1);
+        Terminal.eraseRow();
         processCommand(command, filePath);
     }
 
@@ -39,6 +39,7 @@ public class TerminalTextEditor {
         Terminal.setCursorTerminalPosition(document.getCursor());
         Terminal.saveCursorTerminalPosition();
         Terminal.moveCursorHome();
+        Terminal.displayUI(document.getTotalLines());
         document.displayText();
         System.out.flush();
         Terminal.restoreCursorTerminalPosiiton();
@@ -85,25 +86,27 @@ public class TerminalTextEditor {
     private static void processCommand(String command, String filePath) {
         updateTerminalDisplay();
         GapBuffer gapBuffer = document.getGapBuffer();
-        Terminal.moveCursorHome();
+        
         switch (command) {
             case "w":
                 FileHandler.saveFile(filePath, gapBuffer);
-                Terminal.clearScreen();
-                System.out.print("File saved.");
                 break;
             case "q":
-                Terminal.clearScreen();
-                System.out.print("Exiting editor...");
-                System.exit(0);
+                exitEditor("Exiting editor...");
                 break;
             case "wq":
                 FileHandler.saveFile(filePath, gapBuffer);
-                Terminal.clearScreen();
-                System.out.print("File saved. Exiting editor...");
-                System.exit(0);
+                exitEditor("File saved. Exiting editor...");
+                break;
             default:
                 break;
         }
     }
+    
+    private static void exitEditor(String message) {
+        Terminal.clearScreen();
+        Terminal.moveCursorHome();
+        System.out.print(message);
+        System.exit(0);
+    }    
 }

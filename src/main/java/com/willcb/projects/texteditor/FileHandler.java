@@ -25,7 +25,6 @@ public class FileHandler {
                 
             }
             reader.close();
-            System.out.println("File Loaded:\n");
         } catch (FileNotFoundException e) {
             System.out.println("File Not Found!");
 
@@ -41,7 +40,6 @@ public class FileHandler {
                 writer.write(gaplessBuffer.get(i));
             }
             writer.close();
-            System.out.println("Successfully wrote to the file.");
           } catch (IOException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

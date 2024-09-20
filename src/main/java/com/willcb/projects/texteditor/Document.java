@@ -117,12 +117,13 @@ public class Document {
 
     public void displayText(){
         List<Character> buffer = gapBuffer.getNonGapText();
-        Terminal.eraseLine();
+        Terminal.moveCursorHome();
+        Terminal.eraseContentInRow();
         for (int i = 0; i < buffer.size(); i++) {
             char key = buffer.get(i);
             System.out.print(key);
             if (key == '\n') {
-                Terminal.eraseLine();
+                Terminal.eraseContentInRow();
             }
         }
         Terminal.setCursorTerminalPosition(cursor);
