@@ -80,4 +80,11 @@ public class Terminal {
         String cursorPositionSeq = "\033[" + row + ";" + col + "H";
         System.out.print(cursorPositionSeq);
     }
+
+    public static void displayCursorInfo(Cursor cursor) {
+        int row = cursor.getCurrentLineNum() + 1;
+        int col = cursor.getCurrentColumn(); 
+        moveToBottomRow(getTerminalRows());
+        System.out.print("Ln " + row + ", Col " + col);
+    }
 }

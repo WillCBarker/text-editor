@@ -30,7 +30,6 @@ public class TerminalTextEditor {
         Terminal.moveToBottomRow(Terminal.getTerminalRows()-1);
         System.out.print(":");
         String command = scanner.nextLine();
-        Terminal.moveToBottomRow(Terminal.getTerminalRows()-1);
         Terminal.eraseRow();
         processCommand(command, filePath);
     }
@@ -40,6 +39,7 @@ public class TerminalTextEditor {
         Terminal.saveCursorTerminalPosition();
         Terminal.moveCursorHome();
         Terminal.displayUI(document.getTotalLines());
+        Terminal.displayCursorInfo(document.getCursor());
         document.displayText();
         System.out.flush();
         Terminal.restoreCursorTerminalPosiiton();
@@ -108,5 +108,5 @@ public class TerminalTextEditor {
         Terminal.moveCursorHome();
         System.out.print(message);
         System.exit(0);
-    }    
+    }
 }
