@@ -1,32 +1,16 @@
-- Add partialDisplayUpdate function to terminal to only reload affected lines
-- Add capability to create new file
-- Add some color to ui
-- Add more commands
-- Simplify launch command (research this in tandem with creating downloadable software for path)
-
-- make console editor/entry point super simple, modulate bigtime
+FUNCITONALITY:
+    - Ensure editor can handle scrolling files (files with more lines than terminal rows)
+    - Add partialDisplayUpdate function to terminal to only reload affected lines
+    - Add capability to create new file
+    - Convert from standard output to direct terminal interaction for output
     
-- Run application from command line > pass in file as argument > print file to command line > allow editing and browsing lines from here
+DISPLAY:
+    - Add color to ui
 
-
-to be used info to reference:
-
-    public static void partialWriteToConsole(List<Character> buffer, Cursor cursor) {
-        HANDLE hConsoleOutput = Kernel32.INSTANCE.GetStdHandle(Kernel32.STD_OUTPUT_HANDLE);
-        String cursorPositionSeq = getCursorPositionSequence(cursor);
-
-        // Call WriteConsole to output the cursor position
-        IntByReference written = new IntByReference(0);
-
-        // Prepare the buffer to write to the console as a String
-        StringBuilder sb = new StringBuilder(buffer.size());
-        for (Character c : buffer) {
-            sb.append(c);
-        }
-        String output = sb.toString();
-
-        // Call WriteConsole to output the text
-        Kernel32.INSTANCE.WriteConsole(hConsoleOutput, output, output.length(), written, null);
-        Kernel32.INSTANCE.WriteConsole(hConsoleOutput, cursorPositionSeq, cursorPositionSeq.length(), written, null);
-
-    }
+EXTRA:
+    - Add support for more commands
+        - Tab
+        - Page Up/Down
+    - Simplify launch command
+    - Research how to convert to callable tool from anywhere in terminal
+    - Linux & MacOS support
