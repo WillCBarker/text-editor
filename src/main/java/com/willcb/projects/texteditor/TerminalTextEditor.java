@@ -5,23 +5,28 @@ import java.util.Scanner;
 
 public class TerminalTextEditor {
     private static Document document;
-
+    private static String filePath = "";
+    private static Scanner scanner;
     public static void main(String[] args) {
-        String filePath = args[0];
-        document = FileHandler.LoadFileIntoBuffer(filePath);
+        filePath = args[0];
+        loadDocument(filePath);
         Terminal.clearScreen();
         updateTerminalDisplay();
-        Scanner scanner = new Scanner(System.in);
+        startEditorLoop(filePath);
+    }
 
-        while (true) {
+    private static void loadDocument(String filePath) {
+        document = FileHandler.LoadFileIntoBuffer(filePath);
+    }
+
+    private static void startEditorLoop(String filePath) {
+        scanner = new Scanner(System.in);
+        boolean running = true;
+
+        while (running) {
             KEY_EVENT_RECORD keyEvent = Terminal.initializeConsoleInstance();
-
             if (keyEvent.bKeyDown) {
-                if (keyEvent.wVirtualKeyCode == 0x1B) { // Escape key
-                    enterCommandMode(scanner, filePath);
-                } else {
-                    handleTextEditing(keyEvent);
-                }
+                handleTextEditing(keyEvent);
             }
         }
     }
@@ -56,12 +61,9 @@ public class TerminalTextEditor {
         System.out.flush();
         Terminal.restoreCursorTerminalPosiiton();
     }
-    
 
     private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
         char keyChar = keyEvent.uChar;
-
-        // Check if keyChar is not typically printable
         if (Character.isISOControl(keyChar)) {
             handleControlKey(keyEvent);
         } else {
@@ -91,6 +93,11 @@ public class TerminalTextEditor {
                     break;
                 case DOWN_ARROW:
                     document.arrowKeyHandler('d');
+                    break;
+                case ESCAPE:
+                    enterCommandMode(scanner, filePath);
+                    break;
+                default:
                     break;
             }
         }
