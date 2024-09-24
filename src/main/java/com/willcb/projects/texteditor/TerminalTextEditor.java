@@ -5,38 +5,41 @@ import java.util.Scanner;
 
 public class TerminalTextEditor {
     private static Document document;
-    private static String filePath = "";
-    private static Scanner scanner;
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        filePath = args[0];
-        loadDocument(filePath);
+        loadDocument(args[0]);
         Terminal.clearScreen();
         updateTerminalDisplay();
-        startEditorLoop(filePath);
+        runEditorLoop(document.getFilePath());
     }
 
     private static void loadDocument(String filePath) {
         document = FileHandler.LoadFileIntoBuffer(filePath);
     }
 
-    private static void startEditorLoop(String filePath) {
-        scanner = new Scanner(System.in);
+    private static void runEditorLoop(String filePath) {
         boolean running = true;
 
         while (running) {
             KEY_EVENT_RECORD keyEvent = Terminal.initializeConsoleInstance();
             if (keyEvent.bKeyDown) {
-                handleTextEditing(keyEvent);
+                handleTextEditing(keyEvent, filePath);
             }
         }
+        closeScanner();
     }
 
-    public static void enterCommandMode(Scanner scanner, String filePath) {
+    public static void enterCommandMode(String filePath) {
         Terminal.moveToBottomRow(Terminal.getTerminalRows()-1);
         System.out.print(":");
         String command = scanner.nextLine();
         Terminal.eraseRow();
         processCommand(command, filePath);
+    }
+
+    public static void closeScanner() {
+        scanner.close();
     }
 
     public static void updateTerminalDisplay() {
@@ -62,17 +65,17 @@ public class TerminalTextEditor {
         Terminal.restoreCursorTerminalPosiiton();
     }
 
-    private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
+    private static void handleTextEditing(KEY_EVENT_RECORD keyEvent, String filePath) {
         char keyChar = keyEvent.uChar;
         if (Character.isISOControl(keyChar)) {
-            handleControlKey(keyEvent);
+            handleControlKey(keyEvent, filePath);
         } else {
             document.addCharacter(keyChar);
         }
         updateTerminalDisplay();
     }
 
-    private static void handleControlKey(KEY_EVENT_RECORD keyEvent) {
+    private static void handleControlKey(KEY_EVENT_RECORD keyEvent, String filePath) {
         KeyCode key = KeyCode.fromCode(keyEvent.wVirtualKeyCode);
         if (key != null) {
             switch (key) {
@@ -95,7 +98,7 @@ public class TerminalTextEditor {
                     document.arrowKeyHandler('d');
                     break;
                 case ESCAPE:
-                    enterCommandMode(scanner, filePath);
+                    enterCommandMode(filePath);
                     break;
                 default:
                     break;
