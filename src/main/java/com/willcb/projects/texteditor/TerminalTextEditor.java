@@ -35,20 +35,33 @@ public class TerminalTextEditor {
     }
 
     public static void updateTerminalDisplay() {
+        saveAndResetTerminalCursorPosition();
+        displayUIAndText();
+        flushAndRestoreCursor();
+    }
+    
+    private static void saveAndResetTerminalCursorPosition() {
         Terminal.setCursorTerminalPosition(document.getCursor());
         Terminal.saveCursorTerminalPosition();
         Terminal.moveCursorHome();
+    }
+    
+    private static void displayUIAndText() {
         Terminal.displayUI(document.getTotalLines());
         Terminal.displayCursorInfo(document.getCursor());
         document.displayText();
+    }
+    
+    private static void flushAndRestoreCursor() {
         System.out.flush();
         Terminal.restoreCursorTerminalPosiiton();
     }
+    
 
     private static void handleTextEditing(KEY_EVENT_RECORD keyEvent) {
         char keyChar = keyEvent.uChar;
 
-        // Check if keyChar is printable
+        // Check if keyChar is not typically printable
         if (Character.isISOControl(keyChar)) {
             handleControlKey(keyEvent);
         } else {
