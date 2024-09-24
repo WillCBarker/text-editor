@@ -11,7 +11,7 @@ public class FileHandler {
     
     public static Document LoadFileIntoBuffer(String filePath) {
         GapBuffer gapBuffer = new GapBuffer(200);
-        Document document = new Document(gapBuffer);
+        Document document = new Document(gapBuffer, filePath);
         try {
             File obj = new File(filePath);
             Scanner reader = new Scanner(obj);
