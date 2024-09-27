@@ -72,7 +72,9 @@ public class Cursor {
         }
 
         if (currentColumn >= getLineLength(currentLineNum)) {
-            moveToNextLine();
+            if (currentLineNum < lineLengthInfo.size() - 2) {
+                moveToNextLine();
+            }
         } else {
             currentColumn++;
             desiredColumn = currentColumn;
@@ -95,7 +97,6 @@ public class Cursor {
                     - Math.min(getLineLength(currentLineNum), currentColumn);
             position -= ColNewLineLenDiff;
             position--;
-            desiredColumn = currentColumn;
         }
         logger.warning("moveUp AFTER > CL: " + currentLineNum);
     }
