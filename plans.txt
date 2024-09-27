@@ -1,11 +1,19 @@
 FUNCITONALITY:
     - Ensure editor can handle scrolling files (files with more lines than terminal rows)
+        - Fix cursor being placed in bottom row when hitting bottom border
+            - This also impacts moving text to new line via enter as well
+            - When thhe lineCount exceeds border size, cursor is shifted down too far. You had this same issue with the scanner being output to this line.
+            
     - Add partialDisplayUpdate function to terminal to only reload affected lines
     - Add capability to create new file
     - Convert from standard output to direct terminal interaction for output
     
 DISPLAY:
     - Add color to ui
+
+BUGFIX:
+    - Text wrapping to next line
+    - Holding down any key (outside of shift?) will cause the cursor to appear to zoom around the window (it's not really moving behind the scenes)
 
 EXTRA:
     - Add support for more commands

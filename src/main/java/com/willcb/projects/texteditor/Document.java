@@ -1,16 +1,28 @@
 package com.willcb.projects.texteditor;
-
 import java.util.List;
+import java.util.logging.Logger;
+
 
 public class Document {
+    private static Logger logger = LoggerUtil.getLogger();
     private Cursor cursor;
     private GapBuffer gapBuffer;
+    private String filePath;
 
-    public Document(GapBuffer gapBuffer) {
+    public Document(GapBuffer gapBuffer, String filePath) {
+        this.filePath = filePath;
         this.gapBuffer = gapBuffer;
         this.cursor = new Cursor(0);
     }
     
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
     public GapBuffer getGapBuffer() {
         return gapBuffer;
     }
@@ -59,22 +71,24 @@ public class Document {
      */
     public void addCharacter(Character character) {
         int cursorPosition = cursor.getPosition();
-        int currentLineNum = cursor.getCurrentLineNum();
-        int currentColumn = cursor.getCurrentColumn();
         
         gapBuffer.insert(character, cursorPosition);
         if (character == '\n') {
-            // Return character 
-            int lineLength = cursor.getLineLength(currentLineNum);
-
-            // Ensure to not insert into position out of bounds by getting minimum of array size and intended line + 1
-            cursor.insertLine(Math.min(cursor.getLineLengthInfo().size(), currentLineNum + 1), lineLength - currentColumn);
-            cursor.modifyLineLength(currentLineNum, currentColumn);
-            cursor.moveToNextLine(); 
+            handleCarriageReturn();
         } else {
             // Adding non-return type character
             cursor.moveToNextCharacter();
         }
+    }
+
+    public void handleCarriageReturn() {
+        int currentLineNum = cursor.getCurrentLineNum();
+        int currentColumn = cursor.getCurrentColumn();
+        int lineLength = cursor.getLineLength(currentLineNum);
+        // Ensure to not insert into position out of bounds by getting minimum of array size and intended line + 1
+        cursor.insertLine(Math.min(cursor.getLineLengthInfo().size(), currentLineNum + 1), lineLength - currentColumn);
+        cursor.modifyLineLength(currentLineNum, currentColumn);
+        cursor.moveToNextLine();
     }
     
     /**
@@ -91,6 +105,9 @@ public class Document {
         int cursorPosition = cursor.getPosition();
         int currentLine = cursor.getCurrentLineNum();
         int currentLineLength = cursor.getLineLength(currentLine);
+
+        logger.warning("DELETE BEFORE > CL: " + currentLine);
+
         if (cursorPosition > 0 && cursor.getCurrentColumn() > 0) {
             gapBuffer.delete(cursorPosition);
             cursor.moveLeft();
@@ -101,6 +118,7 @@ public class Document {
             cursor.modifyLineLength(currentLine - 1, cursor.getLineLength(currentLine - 1) + currentLineLength);
             cursor.deleteLine(currentLine);
         }
+        logger.warning("DELETE AFTER > CL: " + cursor.getCurrentLineNum());
     }
 
     public void resetCursorPosition() {
@@ -115,11 +133,25 @@ public class Document {
         System.out.println("Current Line Len: " + cursor.getLineLength(cursor.getCurrentLineNum()) + " ARR: " + cursor.getLineLengthInfo());
     }
 
-    public void displayText(){
+    public void displayText() {
         List<Character> buffer = gapBuffer.getNonGapText();
+        Terminal.displayUI(getTotalLines()+1, cursor, buffer.size());
         Terminal.moveCursorHome();
         Terminal.eraseContentInRow();
-        for (int i = 0; i < buffer.size(); i++) {
+        
+        // logger.warning("Buffer: " + buffer + " CURSOR LN: " + cursor.getCurrentLineNum());
+        
+        int totalLines = Terminal.getTerminalRows(); // Total number of lines that can be displayed
+        int currentLineNum = cursor.getCurrentLineNum(); // Current cursor line
+        // HERE: Make it so it isn't reliant on currentLineNum UNTIL at the border of top or bottom, currently works for bottom border already, this impacts auto-shifting up negatively currently
+        int startLine = Math.max(0, currentLineNum - (totalLines-3));
+        int endLine = Math.min(buffer.size(), startLine + totalLines); // Calculate end line index
+        int startPoint = getStartIndexOfLine(startLine);
+        int endPoint = getStartIndexOfLine(endLine) + cursor.getLineLength(endLine);
+
+        logger.warning("START LINE: " + startLine + " | END LINE: " + endLine);
+        
+        for (int i = startPoint; i < endPoint; i++) {
             char key = buffer.get(i);
             System.out.print(key);
             if (key == '\n') {
@@ -127,6 +159,21 @@ public class Document {
             }
         }
         Terminal.setCursorTerminalPosition(cursor);
+    }
+    
+    public int getStartIndexOfLine(int lineNum) {
+        List<Integer> LineLengthInfo = cursor.getLineLengthInfo();
+        int index = 0;
+        if (lineNum < LineLengthInfo.size()) {
+            for (int i = 0; i < lineNum - 1; i++) {
+                index += LineLengthInfo.get(i);
+            }
+            return Math.max(0, index + lineNum - 1);
+        }
+        for (int i = 0; i < LineLengthInfo.size(); i++) {
+            index += LineLengthInfo.get(i);
+        }
+        return Math.max(0, index + LineLengthInfo.size() - 1);
     }
 
     public List<Character> getDisplayedTextList() {
@@ -138,3 +185,4 @@ public class Document {
         return LineLengthInfo.size();
     }
 }
+

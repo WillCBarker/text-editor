@@ -2,8 +2,11 @@ package com.willcb.projects.texteditor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Cursor {
+    private static Logger logger = LoggerUtil.getLogger();
+
     private int position;
     private int currentColumn;
     private int currentLineNum;
@@ -78,6 +81,7 @@ public class Cursor {
     }
 
     public void moveUp() {
+        logger.warning("moveUp BEFORE > CL: " + currentLineNum);
         if (currentLineNum > 0) {
             // Shift to start of current line (subtract current Column)
             position -= currentColumn;
@@ -90,12 +94,14 @@ public class Cursor {
             int ColNewLineLenDiff = Math.max(getLineLength(currentLineNum), currentColumn)
                     - Math.min(getLineLength(currentLineNum), currentColumn);
             position -= ColNewLineLenDiff;
-            position -= 1;
+            position--;
+            desiredColumn = currentColumn;
         }
+        logger.warning("moveUp AFTER > CL: " + currentLineNum);
     }
 
     public void moveDown() {
-        if (currentLineNum < lineLengthInfo.size() - 1) {
+        if (currentLineNum < lineLengthInfo.size() - 2) {
             int distanceToLineEnd = getLineLength(currentLineNum) - currentColumn;
             currentLineNum++;
             currentColumn = Math.min(desiredColumn, getLineLength(currentLineNum));
@@ -153,5 +159,4 @@ public class Cursor {
     public void setDesiredColumn(int column) {
         desiredColumn = column;
     }
-
 }

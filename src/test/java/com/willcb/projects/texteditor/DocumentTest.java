@@ -14,7 +14,7 @@ public class DocumentTest {
     @BeforeEach
     public void setUp() {
         gapBuffer = new GapBuffer(200);
-        document = new Document(gapBuffer);
+        document = new Document(gapBuffer, "");
     }
 
     @Test

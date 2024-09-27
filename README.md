@@ -30,3 +30,5 @@ A console-based text editor built with Java, utilizing a gap buffer for efficien
 4. Run the project with:
    ```
    mvn exec:java -Dexec.mainClass=com.willcb.projects.texteditor.TerminalTextEditor -Dexec.args="<FILE PATH HERE>"
+
+   mvn exec:java -Dexec.mainClass=com.willcb.projects.texteditor.TerminalTextEditor -Dexec.args="C:\Users\Willb\Desktop\text-editor\test.txt"

@@ -1,0 +1,1151 @@
+Sep 26, 2024 6:33:57 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:57 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:58 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:33:59 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:00 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:34:00 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:00 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:34:00 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 9
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 9
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 10
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 11
+Sep 26, 2024 6:34:01 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 12
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 13
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 14
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 15
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 16
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 17
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 18
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 19
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 20
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 21
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 22
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 23
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 24
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 25
+Sep 26, 2024 6:34:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 26
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 27
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 28
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 27
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 26
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 27
+Sep 26, 2024 6:34:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:05 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 26
+Sep 26, 2024 6:34:05 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 25
+Sep 26, 2024 6:34:05 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 27
+Sep 26, 2024 6:34:05 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 28
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 29
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 30
+Sep 26, 2024 6:34:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 31
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 32
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 2 Endline: 34
+Sep 26, 2024 6:34:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 2 | END LINE: 35
+Sep 26, 2024 6:34:09 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 32
+Sep 26, 2024 6:34:09 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 31
+Sep 26, 2024 6:34:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 31
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 30
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 30
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 29
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 29
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 28
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 28
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 27
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 27
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 26
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 26
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 25
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 25
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 24
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 24
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 23
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 23
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 22
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 22
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 21
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 21
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 20
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 20
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 19
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 19
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 18
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:14 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 18
+Sep 26, 2024 6:34:14 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 17
+Sep 26, 2024 6:34:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:15 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:15 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:16 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 18
+Sep 26, 2024 6:34:16 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 17
+Sep 26, 2024 6:34:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 18
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 17
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:19 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:19 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:42 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:42 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:34:56 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:34:56 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:01 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:01 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:02 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:03 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 10
+Sep 26, 2024 6:35:04 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:05 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 11
+Sep 26, 2024 6:35:05 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 12
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 13
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 14
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 15
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 16
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 17
+Sep 26, 2024 6:35:06 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 18
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 19
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 20
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 21
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 22
+Sep 26, 2024 6:35:07 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 23
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 23
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 24
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 25
+Sep 26, 2024 6:35:08 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 23
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 22
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 24
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 22
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 21
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 23
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 21
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 21
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 23
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 24
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 25
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 26
+Sep 26, 2024 6:35:09 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 27
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 28
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 29
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 30
+Sep 26, 2024 6:35:10 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 31
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 32
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 33
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 2 Endline: 34
+Sep 26, 2024 6:35:11 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 2 | END LINE: 35
+Sep 26, 2024 6:35:12 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:12 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:13 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 33
+Sep 26, 2024 6:35:13 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 32
+Sep 26, 2024 6:35:13 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 2 Endline: 35
+Sep 26, 2024 6:35:13 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 2 | END LINE: 35
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 32
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 31
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 31
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 30
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 30
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 29
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 29
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 28
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 28
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 27
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 27
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 26
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 26
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 25
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:14 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 25
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 24
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:15 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 2 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 2 | END LINE: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 35
+Sep 26, 2024 6:35:16 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 4 Endline: 36
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 4 | END LINE: 37
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 5 Endline: 37
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 5 | END LINE: 38
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 6 Endline: 38
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 6 | END LINE: 39
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 7 Endline: 39
+Sep 26, 2024 6:35:17 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 7 | END LINE: 40
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 8 Endline: 40
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 8 | END LINE: 41
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 9 Endline: 41
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 9 | END LINE: 42
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 10 Endline: 42
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 10 | END LINE: 43
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 11 Endline: 43
+Sep 26, 2024 6:35:18 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 11 | END LINE: 44
+Sep 26, 2024 6:35:20 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 41
+Sep 26, 2024 6:35:20 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 40
+Sep 26, 2024 6:35:20 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 10 Endline: 43
+Sep 26, 2024 6:35:20 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 10 | END LINE: 43
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 40
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 39
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 9 Endline: 42
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 9 | END LINE: 42
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 39
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 38
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 8 Endline: 41
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 8 | END LINE: 41
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 38
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 37
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 7 Endline: 40
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 7 | END LINE: 40
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 37
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 36
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 6 Endline: 39
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 6 | END LINE: 39
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 36
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 35
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 5 Endline: 38
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 5 | END LINE: 38
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 35
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 34
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 4 Endline: 37
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 4 | END LINE: 37
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 34
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 3 Endline: 36
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 3 | END LINE: 36
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 32
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 2 Endline: 35
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 2 | END LINE: 35
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 32
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 31
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 1 Endline: 34
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 1 | END LINE: 34
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 31
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 30
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 30
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 29
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 29
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 28
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 28
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 27
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:21 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:22 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp BEFORE > CL: 27
+Sep 26, 2024 6:35:22 PM com.willcb.projects.texteditor.Cursor moveUp
+WARNING: moveUp AFTER > CL: 26
+Sep 26, 2024 6:35:22 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:22 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 26
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 25
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 25
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 24
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 24
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 23
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 23
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 22
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 22
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 21
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 21
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 20
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:23 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 20
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 19
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 19
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 18
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 18
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 17
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 17
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 16
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 16
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 15
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 32
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 15
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 14
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 31
+Sep 26, 2024 6:35:24 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 14
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 13
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 30
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 13
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 12
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 29
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 12
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 11
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 28
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 11
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 10
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 27
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE BEFORE > CL: 10
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document deleteCharacter
+WARNING: DELETE AFTER > CL: 9
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 26
+Sep 26, 2024 6:35:25 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33
+Sep 26, 2024 8:10:08 PM com.willcb.projects.texteditor.Terminal displayUI
+INFO: 
+StartLine: 0 Endline: 26
+Sep 26, 2024 8:10:08 PM com.willcb.projects.texteditor.Document displayText
+WARNING: START LINE: 0 | END LINE: 33

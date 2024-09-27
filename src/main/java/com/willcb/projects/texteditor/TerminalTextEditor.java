@@ -55,7 +55,7 @@ public class TerminalTextEditor {
     }
     
     private static void displayUIAndText() {
-        Terminal.displayUI(document.getTotalLines());
+        // Terminal.displayUI(document.getTotalLines()+1);
         Terminal.displayCursorInfo(document.getCursor());
         document.displayText();
     }
